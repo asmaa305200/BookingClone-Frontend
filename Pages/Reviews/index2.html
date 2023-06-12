@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reviews | Booking.com</title>
+  <link href="../../shared/favico.ico" rel="icon">
+  <link href="../../bootstrap-custom/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link href="styles/index2.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="bg-body-tertiary">
+    <nav class="navbar bg-primary">
+      <div class="container">
+        <a class="navbar-brand text-white fw-bold">Booking.com</a>
+        <form class="d-flex" role="search">
+          <button class="btn btn-outline-light border-0 mx-1" data-bs-toggle="modal" data-bs-target="#currenciesModal"
+            data-bs-tooltip="tooltip" data-bs-placement="bottom" data-bs-title="Choose your currency">
+            EGP
+          </button>
+          <div class="modal fade" id="currenciesModal" tabindex="-1" aria-labelledby="currenciesModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5 fw-bold" id="currenciesModalLabel">Select your currency
+                  </h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <h6 class="fw-bold mb-3">All currencies</h6>
+                  <div id="currencyModal" class="row">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-outline-light border-0 mx-1" data-bs-toggle="modal" data-bs-target="#languagesModal"
+            data-bs-tooltip="tooltip" data-bs-placement="bottom" data-bs-title="Choose your language">
+            <i class="fi fi-gb fs-5"></i>
+          </button>
+          <div class="modal fade" id="languagesModal" tabindex="-1" aria-labelledby="languagesModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5 fw-bold" id="languagesModalLabel">Select your language
+                  </h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <h6 class="fw-bold mb-3">All languages</h6>
+                  <div id="languageModal" class="row"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-outline-light border-0 mx-1" data-bs-tooltip="tooltip" data-bs-placement="bottom"
+            data-bs-title="Contact Customer Service">
+            <i class="bi bi-question-circle fs-5"></i>
+          </button>
+          <a href="#" class="btn btn-outline-light border mx-1">List your property</a>
+          <a href="#" class="btn btn-light mx-1">Register</a>
+          <a href="#" class="btn btn-light">Sign in</a>
+        </form>
+      </div>
+    </nav>
+    <nav class="navbar bg-primary">
+      <div class="container">
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link text-white  active border" href="../Stays/index.html">
+              <i class="bi bi-tree"></i>
+              Stays
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">
+              <i class="bi bi-airplane"></i>
+              Flights
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="../Car Rentals/index.html">
+              <i class="bi bi-car-front"></i>
+              Car rentals
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="../Attractions/index.html">
+              <i class="bi bi-binoculars-fill"></i>
+              Attractions
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="index.html">
+              <i class="bi bi-taxi-front-fill"></i>
+              Airport Taxis
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section id="section1">
+    <p class="p_section"><strong id="increase_number">1000000</strong></p>
+    <p class="p_section" style="font-size: 30px;"><strong>destination reviews from real travelers</strong></p>
+
+    <!-- Button trigger modal -->
+    <button type="button" id="question_botton" class="btn btn-primary" data-bs-toggle="modal"
+      data-bs-target="#exampleModal">
+      <strong style="font-size: 17px; "> How was your stay?</strong>
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Verified reviews from real guests.</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="images/90.PNG" alt="photo" width="482px" height="300px">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Sign in and leave a review</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="section_steps">
+    <h1 id="h_steps">How does it work?</h1><br>
+    <img src="images/Capture.PNG" alt="photo steps">
+    <div class="steps">
+      <h3 class="h3_steps">It starts with a booking</h3>
+      <pre class="info">           The only way to leave a review is 
+          to first makea booking. 
+          That's how we know our reviews 
+          come from real guests who have
+           stayed at the property.
+           </pre>
+    </div>
+    <div class="steps" id="step2">
+      <h3 class="h3_steps">Followed by a trip</h3>
+      <pre class="info">           When guests stay at the property, they check
+           out how quiet the room is, how friendly the
+            staff is, and more.</pre>
+    </div>
+    <div class="steps" id="step3">
+      <h3 class="h3_steps">And finally, a review</h3>
+      <pre class="info">           After their trip, guests tell us about their stay.
+           We check for naughty words and verify the
+            authenticity of all guest reviews before adding 
+            them to our site.</pre>
+    </div>
+  </section>
+  <section class="container-fluid my-3" id="section2">
+    <div class="row">
+      <aside class="col-lg-2 col-sm-6" id="aside_lift">
+        <h1 id="h_TopCountries">Top Countries</h1>
+        <div class="callout">
+          <a
+            href="https://www.booking.com/reviews/country/ae.html?aid=376381&label=bookings-naam-0U48THtFadjZBwJ4BHv4SgS267724713972%3Apl%3Ata%3Ap1%3Ap22%2C563%2C000%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp1005390%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YV19IumoQ3O5HnTajxNh2ss&sid=d140edc6f2925d60e453aba149dffe78">
+            United Arab Emirates</a><br>
+          <strong>DAMAC Maison Distinction </strong>- “- Very friendly and welcoming staff and I would like to
+          thanks Mrs.
+          Grace and Mrs. Sumitra for there smoothie chick in and upgraded my room. - The location in waking
+          distance to
+          Dubai mall( approximately 15 min.). - the three bed rooms apartment very spacious and one of the room is
+          master
+          room, the hall apartment with balcony have very nice view on khalifah tower.”
+        </div><br>
+        <div class="callout">
+          <a
+            href="https://www.booking.com/reviews/country/au.html?aid=376381&label=bookings-naam-0U48THtFadjZBwJ4BHv4SgS267724713972%3Apl%3Ata%3Ap1%3Ap22%2C563%2C000%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp1005390%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YV19IumoQ3O5HnTajxNh2ss&sid=d140edc6f2925d60e453aba149dffe78">Australia
+          </a><br>
+          <strong>Adina Apartment Hotel Sydney, Darling Harbour -</strong> “This Hotel was in a fantastic location
+          either
+          walking to the underground, bus or ferry. Staff was friendly especially Adrian who when we first checked
+          in
+          helped pointed to the food places. We opted to upgrade to the Darling Harbor view where we enjoyed all
+          the
+          happenings below before we went back home.”
+        </div><br>
+        <div class="callout">
+          <a
+            href="https://www.booking.com/reviews/country/br.html?aid=376381&label=bookings-naam-0U48THtFadjZBwJ4BHv4SgS267724713972%3Apl%3Ata%3Ap1%3Ap22%2C563%2C000%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp1005390%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YV19IumoQ3O5HnTajxNh2ss&sid=d140edc6f2925d60e453aba149dffe78">Brazil</a>
+          <br><strong>Pousada El Shaddai </strong> - “The staff, the location, the breakfast, the pool, the
+          facilities”
+          Canada
+          Holiday Inn Lethbridge, an IHG Hotel - “good area to other restaurants and shopping”
+        </div><br>
+        <div class="callout">
+          <a
+            href="https://www.booking.com/reviews/country/de.html?aid=376381&label=bookings-naam-0U48THtFadjZBwJ4BHv4SgS267724713972%3Apl%3Ata%3Ap1%3Ap22%2C563%2C000%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp1005390%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YV19IumoQ3O5HnTajxNh2ss&sid=d140edc6f2925d60e453aba149dffe78">Germany</a>
+          <br><strong>Hotel Kipping</strong> Hotel Kipping - “Spacious, quiet, clean rooms. Location a couple
+          blocks from
+          the train station, with many places to eat. Easy access to transportation or walk into town - we did
+          both.”
+        </div><br>
+        <div class="callout">
+          <a
+            href="https://www.booking.com/reviews/country/es.html?aid=376381&label=bookings-naam-0U48THtFadjZBwJ4BHv4SgS267724713972%3Apl%3Ata%3Ap1%3Ap22%2C563%2C000%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp1005390%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YV19IumoQ3O5HnTajxNh2ss&sid=d140edc6f2925d60e453aba149dffe78">Spain</a>
+          <br> <strong>Áurea Catedral by Eurostars Hotel Company</strong> - “everything - the location, the
+          cleanliness,
+          the reception and the breakfast.”
+          France
+        </div><br>
+      </aside>
+
+      <aside class="col-lg-8 col-sm-6" id="aside_right">
+        <h1 id="h_recent">Recent Reviews</h1>
+        <div class="row row-cols-lg-3 g-4">
+          <div class="col-6">
+            <div class="card">
+              <img src="images/2.jpg" class="card-img-top" alt="photo room1">
+              <div class="card-body">
+                <h5 class="card-title">Mamlouk Pyramids Hotel
+                  Cairo, Egypt</h5>
+                <p class="card-text">the location? it’s very warm, clean and hot shower. nice stuff and
+                  beautiful view from
+                  the rooftop
+
+                  Negative section of review
+                  not all rooms have window view.
+
+                  Reviewed: January 20, 2023
+                  Stayed in January 2023</p>
+                <p class="card-text"><strong>EGP 900</strong> </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="card">
+              <img src="images/3.jpg" class="card-img-top" alt="photo room2">
+              <div class="card-body">
+                <h5 class="card-title">Renaissance Cairo Mirage City Hotel
+                  Cairo, Egypt</h5>
+                <p class="card-text">As one of the guests has already told - stop looking for the apartments and
+                  book this
+                  one!
+
+                  Reviewed: January 20, 2023
+                  Stayed in January 2023</p>
+                <p class="card-text"><strong>EGP 400</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="card">
+              <img src="images/4.jpg" class="card-img-top" alt="photo room3">
+              <div class="card-body">
+                <h5 class="card-title">Renaissance Cairo Mirage City Hotel
+                  Cairo, Egypt</h5>
+                <p class="card-text">the pool and activity like diving in the water.
+
+                  Reviewed: January 20, 2023
+                  Stayed in January 2023</p>
+                <p class="card-text"><strong>EGP 357</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="card">
+              <img src="images/5.jpg" class="card-img-top" alt="room ">
+              <div class="card-body">
+                <h5 class="card-title">Royal Inn Residence
+                  Cairo, Egypt</h5>
+                <p class="card-text">the hotel is fantastic in every sense
+
+                  Negative section of review
+                  they did not charge my card and then charged the client!!!
+
+                  Reviewed: January 20, 2023
+                  Stayed in January 2023</p>
+              </div>
+              <div class="card-footer">
+                <p> <strong>EGP 6500</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="card">
+              <img src="images/15.jpg" class="card-img-top" alt="photo">
+              <div class="card-body">
+                <h5 class="card-title">Royal Inn Residence
+                  Cairo, Egypt</h5>
+                <p class="card-text">All the service.Amazing</p>
+              </div>
+              <div class="card-footer">
+                <p> <strong>EGP 2437</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="card">
+              <img src="images/7.jpg" class="card-img-top" alt="photo room1">
+              <div class="card-body">
+                <h5 class="card-title">Mamlouk Pyramids Hotel
+                  Cairo, Egypt</h5>
+                <p class="card-text">the location? it’s very warm, clean and hot shower. nice stuff and
+                  beautiful view from
+                  the rooftop
+
+                  Negative section of review
+                  not all rooms have window view.
+
+                  Reviewed: January 20, 2023
+                  Stayed in January 2023</p>
+                <p class="card-text"><strong>EGP 7700</strong> </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="card">
+              <img src="images/8.jpg" class="card-img-top" alt="photo room2">
+              <div class="card-body">
+                <h5 class="card-title">Renaissance Cairo Mirage City Hotel
+                  Cairo, Egypt</h5>
+                <p class="card-text">As one of the guests has already told - stop looking for the apartments and
+                  book this
+                  one!
+
+                  Reviewed: January 20, 2023
+                  Stayed in January 2023</p>
+                <p class="card-text"><strong>EGP 745</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="card">
+              <img src="images/12.jpg" class="card-img-top" alt="photo room3">
+              <div class="card-body">
+                <h5 class="card-title">Renaissance Cairo Mirage City Hotel
+                  Cairo, Egypt</h5>
+                <p class="card-text">the pool and activity like diving in the water.
+
+                  Reviewed: January 20, 2023
+                  Stayed in January 2023</p>
+                <p class="card-text"><strong>EGP 4356</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="card">
+              <img src="images/10.jpg" class="card-img-top" alt="room ">
+              <div class="card-body">
+                <h5 class="card-title">Royal Inn Residence
+                  Cairo, Egypt</h5>
+                <p class="card-text">the hotel is fantastic in every sense
+
+                  Negative section of review
+                  they did not charge my card and then charged the client!!!
+
+                  Reviewed: January 20, 2023
+                  Stayed in January 2023</p>
+              </div>
+              <div class="card-footer">
+                <p> <strong>EGP 64500</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="card">
+              <img src="images/11.jpg" class="card-img-top" alt="photo">
+              <div class="card-body">
+                <h5 class="card-title">Royal Inn Residence
+                  Cairo, Egypt</h5>
+                <p class="card-text">the pool and activity like diving in the water.
+
+                  Reviewed: January 20, 2023
+                  Stayed in January 2023</p>
+              </div>
+              <div class="card-footer">
+                <p> <strong>EGP 454</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="card">
+              <img src="images/7.jpg" class="card-img-top" alt="photo room1">
+              <div class="card-body">
+                <h5 class="card-title">Mamlouk Pyramids Hotel
+                  Cairo, Egypt</h5>
+                <p class="card-text">the location? it’s very warm, clean and hot shower. nice stuff and
+                  beautiful view from
+                  the rooftop
+
+
+                  Reviewed: January 20, 2023
+                  Stayed in January 2023</p>
+                <p class="card-text"><strong>EGP 5900</strong> </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="card">
+              <img src="images/12.jpg" class="card-img-top" alt="photo room2">
+              <div class="card-body">
+                <h5 class="card-title">Renaissance Cairo Mirage City Hotel
+                  Cairo, Egypt</h5>
+                <p class="card-text">the pool and activity like diving in the water.
+
+                  Reviewed: January 20, 2023
+                  Stayed in January 2023</p>
+                <p class="card-text"><strong>EGP 5600</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+  <div id="footer">
+    <section class="py-4 bg-primary">
+      <div class="container text-center">
+        <h5 class="text-white">Save time, save money!</h5>
+        <p class="lead fs-6">Sign up and we'll send the best deals to you</p>
+        <form class="row g-2 d-flex align-items-center justify-content-center">
+          <div class="col-auto">
+            <label for="inputPassword2" class="visually-hidden">Password</label>
+            <input type="email" class="form-control" id="inputPassword2" placeholder="Your Email Address">
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-info">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="bg-info">
+      <div class="text-center pt-3">
+        <a href="#" class="btn btn-sm btn-outline-light">List your property</a>
+      </div>
+      <hr />
+      <div class="container ps-5">
+        <a href="#" class="text-white">Mobile version</a>
+        <a href="#" class="text-white">Your account</a>
+        <a href="#" class="text-white">Make changes to your booking online</a>
+        <a href="#" class="text-white">Customer service help</a>
+        <a href="#" class="text-white">Become an affiliate</a>
+        <a href="#" class="text-white">Booking.com for Business</a>
+      </div>
+    </section>
+
+    <footer class="container">
+      <section id="footerLinks" class="my-3">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-2">
+            <ul class="list-unstyled">
+              <li>
+                <a href="#">Countries</a>
+              </li>
+              <li>
+                <a href="#">Regions</a>
+              </li>
+              <li>
+                <a href="#">Cities</a>
+              </li>
+              <li>
+                <a href="#">Districts</a>
+              </li>
+              <li>
+                <a href="#">Airports</a>
+              </li>
+              <li>
+                <a href="#">Hotels</a>
+              </li>
+              <li>
+                <a href="#">Places of interest</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2">
+            <ul class="list-unstyled">
+              <li>
+                <a href="#">Homes</a>
+              </li>
+              <li>
+                <a href="#">Apartments</a>
+              </li>
+              <li>
+                <a href="#">Resorts</a>
+              </li>
+              <li>
+                <a href="#">Villas</a>
+              </li>
+              <li>
+                <a href="#">Hostels</a>
+              </li>
+              <li>
+                <a href="#">B&Bs</a>
+              </li>
+              <li>
+                <a href="#">Guest houses</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2">
+            <ul class="list-unstyled">
+              <li>
+                <a href="#">Unique places to stay</a>
+              </li>
+              <li>
+                <a href="index2.html">Reviews</a>
+              </li>
+              <li>
+                <a href="#">Unpacked: Travel articles</a>
+              </li>
+              <li>
+                <a href="#">Travel Communities</a>
+              </li>
+              <li>
+                <a href="#">Seasonal and holiday deals</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2">
+            <ul class="list-unstyled">
+              <li>
+                <a href="#">Car hire</a>
+              </li>
+              <li>
+                <a href="#">Flight finder</a>
+              </li>
+              <li>
+                <a href="#">Restaurant reservations</a>
+              </li>
+              <li>
+                <a href="#">Booking.com for Travel Agents</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2">
+            <ul class="list-unstyled">
+              <li>
+                <a href="#">Coronavirus (COVID-19) FAQs</a>
+              </li>
+              <li>
+                <a href="#">About Booking.com</a>
+              </li>
+              <li>
+                <a href="#">Customer Service help</a>
+              </li>
+              <li>
+                <a href="#"> Partner help</a>
+              </li>
+              <li>
+                <a href="#">Careers</a>
+              </li>
+              <li>
+                <a href="#">Sustainability</a>
+              </li>
+              <li>
+                <a href="#">Press centre</a>
+              </li>
+              <li>
+                <a href="#">Safety resource centre</a>
+              </li>
+              <li>
+                <a href="#">Investor relations</a>
+              </li>
+              <li>
+                <a href="#">Terms & Conditions</a>
+              </li>
+              <li>
+                <a href="#">Partner dispute</a>
+              </li>
+              <li>
+                <a href="#">How we work</a>
+              </li>
+              <li>
+                <a href="#">Privacy & Cookie Statement</a>
+              </li>
+              <li>
+                <a href="#">MSA Statement</a>
+              </li>
+              <li>
+                <a href="#">Corporate contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="mt-4">
+        <div class="text-center">
+          <a href="#" class="text-decoration-none">Extranet login</a>
+        </div>
+        <div class="my-4 ps-5">
+          <p class="fw-light">
+            Copyright &copy; 1996-2023 Booking.com&trade;. All rights reserved.
+          </p>
+        </div>
+        <div class="my-1 text-center">
+          <p class="text-muted fw-light">
+            Booking.com is part of Booking Holdings Inc., the world leader in online travel and related
+            services.
+          </p>
+        </div>
+        <div class="my-2 text-center">
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <img src="../../shared/booking-logo.png" width="96" height="26" />
+            </li>
+            <li class="list-inline-item">
+              <img src="../../shared/priceline-logo.png" width="96" height="26" />
+            </li>
+            <li class="list-inline-item">
+              <img src="../../shared/kayak-logo.png" width="96" height="26" />
+            </li>
+            <li class="list-inline-item">
+              <img src="../../shared/agoda-logo.png" width="96" height="26" />
+            </li>
+            <li class="list-inline-item">
+              <img src="../../shared/rentalcars-logo.png" width="96" height="26" />
+            </li>
+            <li class="list-inline-item">
+              <img src="../../shared/opentable-logo.png" width="96" height="26" />
+            </li>
+          </ul>
+        </div>
+      </section>
+    </footer>
+  </div>
+
+  <script src="../../bootstrap-custom/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="index2.js"></script>
+</body>
+
+</html>

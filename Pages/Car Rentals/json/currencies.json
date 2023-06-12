@@ -1,0 +1,82 @@
+[
+    {
+        "key": "€£$",
+        "name": "Property currency"
+    },
+    {
+        "key": "ARS",
+        "name": "Argentine peso"
+    },
+    {
+        "key": "AUD",
+        "name": "Australian dollar"
+    },
+    {
+        "key": "AZN",
+        "name": "Azerbaijan, New Manats"
+    },
+    {
+        "key": "BHD",
+        "name": "Bahrain dinar"
+    },
+    {
+        "key": "BRL",
+        "name": "Brazilian real"
+    },
+    {
+        "key": "BGN",
+        "name": "Bulgarian lev"
+    },
+    {
+        "key": "CAD",
+        "name": "Canadian dollar"
+    },
+    {
+        "key": "BGN",
+        "name": "Bulgarian lev"
+    },
+    {
+        "key": "XOF",
+        "name": "CFA Franc BCEAO"
+    },
+    {
+        "key": "CLP",
+        "name": "Chilean peso"
+    },
+    {
+        "key": "CNY",
+        "name": "Chinese yuan"
+    },
+    {
+        "key": "COP",
+        "name": "Colombian peso"
+    },
+    {
+        "key": "DKK",
+        "name": "Danish krone"
+    },
+    {
+        "key": "CZK",
+        "name": "Czech koruna"
+    },
+    {
+        "key": "EGP",
+        "name": "Egyptian pound"
+    },
+    {
+        "key": "EUR",
+        "name": "Euro"
+    },
+    {
+        "key": "USD",
+        "name": "U.S. dollar"
+    },
+    {
+        "key": "AED",
+        "name": "U.A.E. dirham"
+    },
+    {
+        "key": "UAH",
+        "name": "Ukraine Hryvnia"
+    }
+]

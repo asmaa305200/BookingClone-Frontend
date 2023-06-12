@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reviews | Booking.com</title>
+  <link href="../../shared/favico.ico" rel="icon">
+  <link href="../../bootstrap-custom/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link href="styles/index2.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="bg-body-tertiary">
+    <nav class="navbar bg-primary">
+      <div class="container">
+        <a class="navbar-brand text-white fw-bold">Booking.com</a>
+        <form class="d-flex" role="search">
+          <button class="btn btn-outline-light border-0 mx-1" data-bs-toggle="modal" data-bs-target="#currenciesModal"
+            data-bs-tooltip="tooltip" data-bs-placement="bottom" data-bs-title="Choose your currency">
+            EGP
+          </button>
+          <div class="modal fade" id="currenciesModal" tabindex="-1" aria-labelledby="currenciesModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5 fw-bold" id="currenciesModalLabel">Select your currency
+                  </h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <h6 class="fw-bold mb-3">All currencies</h6>
+                  <div id="currencyModal" class="row">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-outline-light border-0 mx-1" data-bs-toggle="modal" data-bs-target="#languagesModal"
+            data-bs-tooltip="tooltip" data-bs-placement="bottom" data-bs-title="Choose your language">
+            <i class="fi fi-gb fs-5"></i>
+          </button>
+          <div class="modal fade" id="languagesModal" tabindex="-1" aria-labelledby="languagesModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5 fw-bold" id="languagesModalLabel">Select your language
+                  </h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <h6 class="fw-bold mb-3">All languages</h6>
+                  <div id="languageModal" class="row"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-outline-light border-0 mx-1" data-bs-tooltip="tooltip" data-bs-placement="bottom"
+            data-bs-title="Contact Customer Service">
+            <i class="bi bi-question-circle fs-5"></i>
+          </button>
+
+          <a href="#" class="btn btn-outline-light border mx-1">List your property</a>
+          <a href="#" class="btn btn-light mx-1">Register</a>
+          <a href="#" class="btn btn-light">Sign in</a>
+        </form>
+      </div>
+    </nav>
+
+
+    <nav id="nav2" class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page"
+                href="https://www.booking.com/trust-and-safety.html?label=gen173bo-1FCAEoggI46AdIMVgDaEOIAQGYATG4ARfIAQzYAQHoAQH4AQOIAgGYAgKoAgO4AvvSqp4GwAIB0gIkMzZiMDg5ZTQtNzgyNS00ZjYzLWIwMWUtMWE0MWM0MjczNmM52AIF4AIB&sid=d140edc6f2925d60e453aba149dffe78"
+                id="a_nav">Overview </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page"
+                href="https://www.booking.com/trust-and-safety/values.html?label=gen173bo-1FCAEoggI46AdIMVgDaEOIAQGYATG4ARfIAQzYAQHoAQH4AQOIAgGYAgKoAgO4AvvSqp4GwAIB0gIkMzZiMDg5ZTQtNzgyNS00ZjYzLWIwMWUtMWE0MWM0MjczNmM52AIF4AIB&sid=d140edc6f2925d60e453aba149dffe78"
+                id="a_nav">Our values</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"
+                href="https://www.booking.com/trust-and-safety/travellers.html?label=gen173bo-1FCAEoggI46AdIMVgDaEOIAQGYATG4ARfIAQzYAQHoAQH4AQOIAgGYAgKoAgO4AvvSqp4GwAIB0gIkMzZiMDg5ZTQtNzgyNS00ZjYzLWIwMWUtMWE0MWM0MjczNmM52AIF4AIB&sid=d140edc6f2925d60e453aba149dffe78">Travelers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link "
+                href="https://www.booking.com/trust-and-safety/partners.html?label=gen173bo-1FCAEoggI46AdIMVgDaEOIAQGYATG4ARfIAQzYAQHoAQH4AQOIAgGYAgKoAgO4AvvSqp4GwAIB0gIkMzZiMDg5ZTQtNzgyNS00ZjYzLWIwMWUtMWE0MWM0MjczNmM52AIF4AIB&sid=d140edc6f2925d60e453aba149dffe78">Partners</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link "
+                href="https://www.booking.com/trust-and-safety/covid-19.html?label=gen173bo-1FCAEoggI46AdIMVgDaEOIAQGYATG4ARfIAQzYAQHoAQH4AQOIAgGYAgKoAgO4AvvSqp4GwAIB0gIkMzZiMDg5ZTQtNzgyNS00ZjYzLWIwMWUtMWE0MWM0MjczNmM52AIF4AIB&sid=d140edc6f2925d60e453aba149dffe78">COVID-19
+                resources</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+
+  <section id="section-header"><br><br><br>
+    <pre id="pre1_header">       Trust and safety
+       resource center</pre>
+    <pre class="pre_234">            Safety tips,guidelines,and our values</pre>
+    <pre class="pre_234">            Travelers</pre>
+  </section>
+
+  <section>
+    <img src="images/n1.jpg" alt="photo" id="img_section2">
+    <h4 class="items_section2"><strong>stay safely</strong> </h4>
+    <div id="div_pragraph">
+      <p class="items_section2">At Booking.com, we strive to help everyone experience the world safely. We have many
+        processes in place to protect our guests, and to empower you to take control of your safety while traveling.
+        Visit our traveler resource page to learn more about making your future stays go smoothly.</p><br>
+      <button type="button" class="btn btn-outline-primary" id="btn_section2"
+        onclick="window.location.href='https://www.booking.com/trust-and-safety/travellers.html?label=gen173bo-1FCAEoggI46AdIMVgDaEOIAQGYATG4ARfIAQzYAQHoAQH4AQOIAgGYAgKoAgO4AvvSqp4GwAIB0gIkMzZiMDg5ZTQtNzgyNS00ZjYzLWIwMWUtMWE0MWM0MjczNmM52AIF4AIB&sid=d140edc6f2925d60e453aba149dffe78'">See
+        traveler resources</button>
+    </div>
+  </section>
+
+  <section id="section_parent" class="section-parent">
+    <pre class="section-parent" id="pre_4">parents</pre>
+    <h4 class="section-parent" id="h4_section3"><strong>Host safely</strong> </h4>
+    <img src="images/n2.jpg" alt="photo" id="img_section3">
+    <div id="div-paragraph2" class="section-parent">
+      <p id="p_section3">Bringing peace of mind to our Booking.com Partners is a top priority. We help hosts feel
+        confident about welcoming guests, and have processes in place to protect both you and your property. You can
+        learn more about how to stay safe while hosting on our Partner resource page.
+      </p><br>
+      <button type="button" id="btn_section3" class="btn btn-outline-primary"
+        onclick="window.location.href='https://www.booking.com/trust-and-safety/partners.html?label=gen173bo-1FCAEoggI46AdIMVgDaEOIAQGYATG4ARfIAQzYAQHoAQH4AQOIAgGYAgKoAgO4AvvSqp4GwAIB0gIkMzZiMDg5ZTQtNzgyNS00ZjYzLWIwMWUtMWE0MWM0MjczNmM52AIF4AIB&sid=d140edc6f2925d60e453aba149dffe78'">See
+        partner resources
+      </button>
+    </div>
+  </section>
+  <hr>
+  <section id="section4">
+    <h1 id="h_section4">Our values and guidelines</h1><br>
+    <pre class="pre_btn_section4">At Booking.com, we adhere to a set of values, standards, and guidelines intended to protect 
+      our partners, customers, and employees.</p><br>
+      <button type="button"  class="btn btn-outline-primary" class="pre_btn_section4" style="height:40px ;" onclick="window.location.href='https://www.booking.com/trust-and-safety/values.html?label=gen173bo-1FCAEoggI46AdIMVgDaEOIAQGYATG4ARfIAQzYAQHoAQH4AQOIAgGYAgKoAgO4AvvSqp4GwAIB0gIkMzZiMDg5ZTQtNzgyNS00ZjYzLWIwMWUtMWE0MWM0MjczNmM52AIF4AIB&sid=d140edc6f2925d60e453aba149dffe78'" >Learn more
+      </button>
+  </section><hr><br>
+  <pre class="pre_234">            If something goes wrong</pre>
+    <section>
+      <img src="images/n3.jpg" alt="photo" id="img_section5">
+      <h4 class="items_section5"><strong>What to do if something goes wrong</strong> </h4>
+      <div id="div_pragraph5">
+        <p class="items_section5">In the unlikely event that something goes wrong, we're here for you. In this section,
+          you can find guidelines to follow should an issue arise, as well as the steps we'll take to look after you.
+        </p><br>
+        <button type="button" class="btn btn-outline-primary" id="btn_section5"
+          onclick="window.location.href='https://www.booking.com/trust-and-safety/travellers.html?label=gen173bo-1FCAEoggI46AdIMVgDaEOIAQGYATG4ARfIAQzYAQHoAQH4AQOIAgGYAgKoAgO4AvvSqp4GwAIB0gIkMzZiMDg5ZTQtNzgyNS00ZjYzLWIwMWUtMWE0MWM0MjczNmM52AIF4AIB&sid=d140edc6f2925d60e453aba149dffe78#tns_travellers_gonewrong'">As
+          a traveler
+        </button>
+        <button type="button" class="btn btn-outline-primary" id="btn2_section5"
+          onclick="window.location.href='https://www.booking.com/trust-and-safety/travellers.html?label=gen173bo-1FCAEoggI46AdIMVgDaEOIAQGYATG4ARfIAQzYAQHoAQH4AQOIAgGYAgKoAgO4AvvSqp4GwAIB0gIkMzZiMDg5ZTQtNzgyNS00ZjYzLWIwMWUtMWE0MWM0MjczNmM52AIF4AIB&sid=d140edc6f2925d60e453aba149dffe78#tns_travellers_gonewrong'">
+          As a partner</button><br><br>
+        <p class="text-primary" id="p_question">Are you missing any info?</p>
+        <button type="button" id="btn-y" class="btn btn-light" onclick="window.location.href=''">yes</button>
+        <button type="button" id="btn-n" class="btn btn-light" onclick="window.location.href=''">no</button>
+      </div><br><br>
+      <hr>
+      <p id="p_info">This article is intended for information purposes only and does not constitute legal advice,
+        rights, or a guarantee​. ​​You may need to take additional precautions depending on individual circumstances.
+      </p>
+    </section>
+    <section class="py-4 bg-primary">
+      <div class="container text-center">
+        <h5 class="text-white">Save time, save money!</h5>
+        <p class="lead fs-6">Sign up and we'll send the best deals to you</p>
+        <form class="row g-2 d-flex align-items-center justify-content-center">
+          <div class="col-auto">
+            <label for="inputPassword2" class="visually-hidden">Password</label>
+            <input type="email" class="form-control" id="inputPassword2" placeholder="Your Email Address">
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-info">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="bg-info">
+      <div class="text-center pt-3">
+        <a href="#" class="btn btn-sm btn-outline-light">List your property</a>
+      </div>
+      <hr />
+      <div class="container ps-5">
+        <a href="#" class="text-white">Mobile version</a>
+        <a href="#" class="text-white">Your account</a>
+        <a href="#" class="text-white">Make changes to your booking online</a>
+        <a href="#" class="text-white">Customer service help</a>
+        <a href="#" class="text-white">Become an affiliate</a>
+        <a href="#" class="text-white">Booking.com for Business</a>
+      </div>
+    </section>
+    <footer class="container">
+      <section id="footerLinks" class="my-3">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-2">
+            <ul class="list-unstyled">
+              <li>
+                <a href="#">Countries</a>
+              </li>
+              <li>
+                <a href="#">Regions</a>
+              </li>
+              <li>
+                <a href="#">Cities</a>
+              </li>
+              <li>
+                <a href="#">Districts</a>
+              </li>
+              <li>
+                <a href="#">Airports</a>
+              </li>
+              <li>
+                <a href="#">Hotels</a>
+              </li>
+              <li>
+                <a href="#">Places of interest</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2">
+            <ul class="list-unstyled">
+              <li>
+                <a href="#">Homes</a>
+              </li>
+              <li>
+                <a href="#">Apartments</a>
+              </li>
+              <li>
+                <a href="#">Resorts</a>
+              </li>
+              <li>
+                <a href="#">Villas</a>
+              </li>
+              <li>
+                <a href="#">Hostels</a>
+              </li>
+              <li>
+                <a href="#">B&Bs</a>
+              </li>
+              <li>
+                <a href="#">Guest houses</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2">
+            <ul class="list-unstyled">
+              <li>
+                <a href="#">Unique places to stay</a>
+              </li>
+              <li>
+                <a href="#">Reviews</a>
+              </li>
+              <li>
+                <a href="#">Unpacked: Travel articles</a>
+              </li>
+              <li>
+                <a href="#">Travel Communities</a>
+              </li>
+              <li>
+                <a href="#">Seasonal and holiday deals</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2">
+            <ul class="list-unstyled">
+              <li>
+                <a href="#">Car hire</a>
+              </li>
+              <li>
+                <a href="#"> Flight finder</a>
+              </li>
+              <li>
+                <a href="#">Restaurant reservations</a>
+              </li>
+              <li>
+                <a href="#">Booking.com for Travel Agents</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2">
+            <ul class="list-unstyled">
+              <li>
+                <a href="#">Coronavirus (COVID-19) FAQs</a>
+              </li>
+              <li>
+                <a href="#">About Booking.com</a>
+              </li>
+              <li>
+                <a href="#">Customer Service help</a>
+              </li>
+              <li>
+                <a href="#"> Partner help</a>
+              </li>
+              <li>
+                <a href="#">Careers</a>
+              </li>
+              <li>
+                <a href="#">Sustainability</a>
+              </li>
+              <li>
+                <a href="#">Press centre</a>
+              </li>
+              <li>
+                <a href="#">Safety resource centre</a>
+              </li>
+              <li>
+                <a href="#">Investor relations</a>
+              </li>
+              <li>
+                <a href="#">Terms & Conditions</a>
+              </li>
+              <li>
+                <a href="#">Partner dispute</a>
+              </li>
+              <li>
+                <a href="#">How we work</a>
+              </li>
+              <li>
+                <a href="#">Privacy & Cookie Statement</a>
+              </li>
+              <li>
+                <a href="#">MSA Statement</a>
+              </li>
+              <li>
+                <a href="#">Corporate contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="mt-4">
+        <div class="text-center">
+          <a href="#" class="text-decoration-none">Extranet login</a>
+        </div>
+        <div class="my-4 ps-5">
+          <p class="fw-light">
+            Copyright &copy; 1996-2023 Booking.com&trade;. All rights reserved.
+          </p>
+        </div>
+        <div class="my-1 text-center">
+          <p class="text-muted fw-light">
+            Booking.com is part of Booking Holdings Inc., the world leader in online travel and related
+            services.
+          </p>
+        </div>
+        <div class="my-2 text-center">
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <img src="../../shared/booking-logo.png" width="96" height="26" />
+            </li>
+            <li class="list-inline-item">
+              <img src="../../shared/priceline-logo.png" width="96" height="26" />
+            </li>
+            <li class="list-inline-item">
+              <img src="../../shared/kayak-logo.png" width="96" height="26" />
+            </li>
+            <li class="list-inline-item">
+              <img src="../../shared/agoda-logo.png" width="96" height="26" />
+            </li>
+            <li class="list-inline-item">
+              <img src="../../shared/rentalcars-logo.png" width="96" height="26" />
+            </li>
+            <li class="list-inline-item">
+              <img src="../../shared/opentable-logo.png" width="96" height="26" />
+            </li>
+          </ul>
+        </div>
+      </section>
+    </footer>
+
+    <script src="../../bootstrap-custom/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

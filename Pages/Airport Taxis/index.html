@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airport Taxis | Book your airport taxi online | Booking.com</title>
+    <link rel="icon" href="../../shared/favico.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css">
+    <link href="../../bootstrap-custom/custom-scss/custom-bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <header class="bg-body-tertiary">
+        <nav class="navbar navbar-expand-md bg-primary">
+            <div class="container">
+                <a class="navbar-brand text-white fw-bold" href="#">Booking.com</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
+                    aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarToggler">
+                    <ul class="navbar-nav ms-auto d-flex mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <div class="d-grid gap-2 d-md-block">
+                                <button class="btn btn-outline-light border-0 mx-1" data-bs-toggle="modal"
+                                    data-bs-target="#currenciesModal" data-bs-tooltip="tooltip"
+                                    data-bs-placement="bottom" data-bs-title="Choose your currency">
+                                    EGP
+                                </button>
+                            </div>
+                            <div class="modal fade" id="currenciesModal" tabindex="-1"
+                                aria-labelledby="currenciesModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5 fw-bold" id="currenciesModalLabel">Select your
+                                                currency
+                                            </h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h6 class="fw-bold mb-3">All currencies</h6>
+                                            <div id="currencyModal" class="row">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="d-grid gap-2 d-md-block">
+                                <button class="btn btn-outline-light border-0 mx-1" data-bs-toggle="modal"
+                                    data-bs-target="#languagesModal" data-bs-tooltip="tooltip"
+                                    data-bs-placement="bottom" data-bs-title="Choose your language">
+                                    <i class="fi fi-gb fs-5"></i>
+                                </button>
+                            </div>
+                            <div class="modal fade" id="languagesModal" tabindex="-1"
+                                aria-labelledby="languagesModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5 fw-bold" id="languagesModalLabel">Select your
+                                                language
+                                            </h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h6 class="fw-bold mb-3">All languages</h6>
+                                            <div id="languageModal" class="row"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="d-grid gap-2 d-md-block">
+                                <button class="btn btn-outline-light border-0 mx-1" data-bs-tooltip="tooltip"
+                                    data-bs-placement="bottom" data-bs-title="Contact Customer Service">
+                                    <i class="bi bi-question-circle fs-5"></i>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="d-grid gap-2 d-md-block">
+                                <a href="#" class="btn btn-outline-light border mx-1">List your property</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="d-grid gap-2 d-md-block">
+                                <a href="#" class="btn btn-light mx-1">Register</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="d-grid gap-2 d-md-block">
+                                <a href="#" class="btn btn-light mx-1">Sign in</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar bg-primary">
+            <div class="container">
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="../Stays/index.html">
+                            <i class="bi bi-tree"></i>
+                            Stays
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">
+                            <i class="bi bi-airplane"></i>
+                            Flights
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="../Car Rentals/index.html">
+                            <i class="bi bi-car-front"></i>
+                            Car rentals
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="../Attractions/index.html">
+                            <i class="bi bi-binoculars-fill"></i>
+                            Attractions
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active rounded-5 border" href="index.html">
+                            <i class="bi bi-taxi-front-fill"></i>
+                            Airport Taxis
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="text-bg-light-yellow">
+            <div class="container px-5">
+                <div class="accordion accordion-flush" id="accordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#covidAccordion" aria-expanded="true" aria-controls="covidAccordion">
+                                <i class="bi bi-info-circle fs-4 me-1 text-gold"></i>
+                                Protecting you from COVID-19
+                            </button>
+                        </h2>
+                        <div id="covidAccordion" class="accordion-collapse collapse text-bg-light-yellow"
+                            aria-labelledby="headingOne" data-bs-parent="#accordion">
+                            <div class="accordion-body">
+                                <p class="col-10">
+                                    Your safety matters. From July 2020, we're asking all customers to wear a face
+                                    covering
+                                    when travelling with us. If you don't wear a face covering, your driver may not be
+                                    able
+                                    to start your journey. Where Coronavirus may affect your plans, here's what you need
+                                    to
+                                    know about booking with us at this time.
+                                </p>
+                                <a href="#">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="searchForm" class="container px-5 my-5">
+            <h3>Book your airport taxi</h3>
+            <p>Easy airport transfers to and from your accommodation</p>
+            <form action="loading.html">
+                <div class="my-3">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" value="oneway" name="reservationType"
+                            id="onewayRadio" checked>
+                        <label class="form-check-label" for="onewayRadio">
+                            One-way
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" value="return" name="reservationType"
+                            id="returnRadio">
+                        <label class="form-check-label" for="returnRadio">
+                            Return
+                        </label>
+                    </div>
+                </div>
+                <div class="text-bg-warning p-1 rounded-1">
+                    <div class="input-group">
+                        <span class="input-group-text" id="addon-wrapping">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </span>
+                        <input type="text" id="onewayPickup" name="onewayPickup" class="form-control"
+                            placeholder="Enter pickup Location" required>
+                        <input type="text" id="onewayDestination" name="onewayDestination" class="form-control"
+                            placeholder="Enter destination" required>
+                        <input type="date" id="onewayDate" name="onewayDate" class="form-control">
+                        <input type="time" name="onewayTime" class="form-control">
+                        <span class="input-group-text" id="addon-wrapping">
+                            <i class="bi bi-person"></i>
+                        </span>
+                        <input type="number" name="onewayNumPassengers" class="form-control" min="1" max="16" value="1">
+                        <button class="btn btn-primary px-4 returnHide" type="submit">Search</button>
+                    </div>
+                    <hr class="returnShow my-2" hidden />
+                    <div class="input-group returnShow" hidden>
+                        <span class="input-group-text" id="addon-wrapping">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </span>
+                        <input type="text" id="returnPickup" name="returnPickup" class="form-control" disabled
+                            placeholder="Enter pickup Location">
+                        <input type="text" id="returnDestination" name="returnDestination" class="form-control" disabled
+                            placeholder="Enter destination">
+                        <input type="date" id="returnDate" name="returnDate" class="form-control">
+                        <input type="time" id="returnTime" name="returnTime" class="form-control">
+                        <span class="input-group-text" id="addon-wrapping">
+                            <i class="bi bi-person"></i>
+                        </span>
+                        <input type="number" name="returnNumPassengers" class="form-control" min="1" max="16" value="1">
+                        <button class="btn btn-primary px-4" type="submit">Search</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <section class="container my-3">
+            <div class="row mb-1">
+                <div class="card col-lg-4 border-0">
+                    <div class="row g-0">
+                        <div class="col-md-2 d-flex justify-content-center align-items-center">
+                            <i class="bi bi-airplane fs-1 bg-mint-green rounded-circle py-3 px-4"></i>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Flight tracking</h5>
+                                <p class="card-text">Your driver tracks your flight and waits for you if it's delayed
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-lg-4 border-0">
+                    <div class="row g-0">
+                        <div class="col-md-2 d-flex justify-content-center align-items-center">
+                            <i class="bi bi-credit-card fs-1 bg-light-orange rounded-circle py-3 px-4"></i>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">One clear price</h5>
+                                <p class="card-text">Your price is confirmed upfront - no extra costs, no cash required
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-lg-4 border-0">
+                    <div class="row g-0">
+                        <div class="col-md-2 d-flex justify-content-center align-items-center">
+                            <i class="bi bi-check-lg fs-1 bg-mint-ocean rounded-circle py-3 px-4"></i>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Tried and trusted</h5>
+                                <p class="card-text">We work with professional drivers and have 24/7 customer care</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="my-3 container">
+            <h3 class="text-center my-5">Airport transfers made easy</h3>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card border-0">
+                        <div class="row g-0">
+                            <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                <i class="bi bi-car-front-fill fs-1 bg-light-blue rounded-circle py-3 px-4"></i>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold">Booking your airport taxi</h5>
+                                    <p class="card-text">
+                                        Confirmation is immediate. If your plans change, you can cancel for
+                                        free up to 24 hours before your scheduled pick-up time
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-0">
+                        <div class="row g-0">
+                            <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                <i class="bi bi-person fs-1 bg-light-blue rounded-circle py-3 px-4"></i>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold">Booking your airport taxi</h5>
+                                    <p class="card-text">
+                                        Confirmation is immediate. If your plans change, you can cancel for
+                                        free up to 24 hours before your scheduled pick-up time
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-0">
+                        <div class="row g-0">
+                            <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                <i class="bi bi-building fs-1 bg-light-blue rounded-circle py-3 px-4"></i>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold">Arriving at your destination</h5>
+                                    <p class="card-text">
+                                        Get to your destination quickly and safely - no waiting in line for
+                                        a taxi, no figuring out public transport
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="assets/taxi-how-it-works.svg" />
+                </div>
+            </div>
+        </section>
+        <section class="container py-3">
+            <h4 class="text-center mb-4">Airport taxis for any kind of trip</h4>
+            <div id="carCategoriesButtons" class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                <label class="btn btn-outline-primary" for="btnradio1">1 - 3 passengers</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btnradio2">4 - 7 passengers</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btnradio3">All taxis</label>
+            </div>
+            <div id="carsCategories" class="row my-3">
+                <div class="col-lg-6 px-2 my-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Standard</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Skoda Octavia or similar</h6>
+                            <p class="card-text">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <i class="bi bi-person-fill"></i>
+                                    3 passengers
+                                </li>
+                                <li>
+                                    <span data-bs-tooltip="tooltip" data-bs-placement="right"
+                                        data-bs-title="Max. 63cm x 36cm x 21cm">
+                                        <i class="bi bi-briefcase"></i>
+                                        2 standard bags
+                                    </span>
+                                </li>
+                                <li class="text-info d-inline-flex" data-bs-tooltip="tooltip" data-bs-placement="right"
+                                    data-bs-title="You'll be met in the Arrivals hall and taken to your vehicle">
+                                    <i class="bi bi-check-circle"></i>
+                                    Meet & Greet included
+                                </li>
+                                <li class="text-success">
+                                    <i class="bi bi-check-lg"></i>
+                                    Free cancellation
+                                </li>
+                            </ul>
+                            </p>
+                            <a href="#searchForm" class="btn btn-primary">Search</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-2 my-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Executive</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Mercedes-Benz E-Class or similar</h6>
+                            <p class="card-text">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <i class="bi bi-person-fill"></i>
+                                    3 passengers
+                                </li>
+                                <li>
+                                    <span data-bs-tooltip="tooltip" data-bs-placement="right"
+                                        data-bs-title="Max. 63cm x 36cm x 21cm">
+                                        <i class="bi bi-briefcase"></i>
+                                        2 standard bags
+                                    </span>
+                                </li>
+                                <li class="text-info d-inline-flex" data-bs-tooltip="tooltip" data-bs-placement="right"
+                                    data-bs-title="You'll be met in the Arrivals hall and taken to your vehicle">
+                                    <i class="bi bi-check-circle"></i>
+                                    Meet & Greet included
+                                </li>
+                                <li class="text-success">
+                                    <i class="bi bi-check-lg"></i>
+                                    Free cancellation
+                                </li>
+                            </ul>
+                            </p>
+                            <a href="#searchForm" class="btn btn-primary">Search</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 px-2 my-2" hidden>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">People carrier</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Peugeot 5008 or similar</h6>
+                            <p class="card-text">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <i class="bi bi-person-fill"></i>
+                                    5 passengers
+                                </li>
+                                <li>
+                                    <span data-bs-tooltip="tooltip" data-bs-placement="right"
+                                        data-bs-title="Max. 63cm x 36cm x 21cm">
+                                        <i class="bi bi-briefcase"></i>
+                                        5 standard bags
+                                    </span>
+                                </li>
+                                <li class="text-info d-inline-flex" data-bs-tooltip="tooltip" data-bs-placement="right"
+                                    data-bs-title="You'll be met in the Arrivals hall and taken to your vehicle">
+                                    <i class="bi bi-check-circle"></i>
+                                    Meet & Greet included
+                                </li>
+                                <li class="text-success">
+                                    <i class="bi bi-check-lg"></i>
+                                    Free cancellation
+                                </li>
+                            </ul>
+                            </p>
+                            <a href="#searchForm" class="btn btn-primary">Search</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 px-2 my-2" hidden>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Executive people carrier</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Mercedes-Benz V-Class or similar</h6>
+                            <p class="card-text">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <i class="bi bi-person-fill"></i>
+                                    6 passengers
+                                </li>
+                                <li>
+                                    <span data-bs-tooltip="tooltip" data-bs-placement="right"
+                                        data-bs-title="Max. 63cm x 36cm x 21cm">
+                                        <i class="bi bi-briefcase"></i>
+                                        6 standard bags
+                                    </span>
+                                </li>
+                                <li class="text-info d-inline-flex" data-bs-tooltip="tooltip" data-bs-placement="right"
+                                    data-bs-title="You'll be met in the Arrivals hall and taken to your vehicle">
+                                    <i class="bi bi-check-circle"></i>
+                                    Meet & Greet included
+                                </li>
+                                <li class="text-success">
+                                    <i class="bi bi-check-lg"></i>
+                                    Free cancellation
+                                </li>
+                            </ul>
+                            </p>
+                            <a href="#searchForm" class="btn btn-primary">Search</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 px-2 my-2" hidden>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Large people carrier</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Ford Tourneo or similar</h6>
+                            <p class="card-text">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <i class="bi bi-person-fill"></i>
+                                    7 passengers
+                                </li>
+                                <li>
+                                    <span data-bs-tooltip="tooltip" data-bs-placement="right"
+                                        data-bs-title="Max. 63cm x 36cm x 21cm">
+                                        <i class="bi bi-briefcase"></i>
+                                        7 standard bags
+                                    </span>
+                                </li>
+                                <li class="text-info d-inline-flex" data-bs-tooltip="tooltip" data-bs-placement="right"
+                                    data-bs-title="You'll be met in the Arrivals hall and taken to your vehicle">
+                                    <i class="bi bi-check-circle"></i>
+                                    Meet & Greet included
+                                </li>
+                                <li class="text-success">
+                                    <i class="bi bi-check-lg"></i>
+                                    Free cancellation
+                                </li>
+                            </ul>
+                            </p>
+                            <a href="#searchForm" class="btn btn-primary">Search</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container py-4">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4 p-3">
+                        <h4 class="fw-bold">Find out more about our airport taxi service</h4>
+                        <p>See more FAQs on our <a href="#" class="fw-bold">help page</a></p>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        What happens if my flight is early or delayed?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Our Meet & Greet service means that if you provide your flight number when
+                                        you're
+                                        booking your airport taxi, we'll be able to track your flight and adjust your
+                                        pick-up time automatically according to your actual arrival time. Once your
+                                        flight
+                                        has landed, your driver will wait for 45 minutes. This should give you plenty of
+                                        time to pass through security, claim your baggage and head through to arrivals
+                                        to
+                                        meet your driver.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        What's included in the price?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Our prices include all taxes, fees, gratuity and toll road charges. If you book
+                                        an
+                                        airport pick-up, prices also include Meet & Greet as standard, which means we'll
+                                        track your flight and wait for 45 minutes from the time your flight arrives. If
+                                        you
+                                        book a return taxi to the airport - or any other non-airport pick-up - your
+                                        driver
+                                        will wait for 15 minutes after the scheduled pick-up time. Please note that you
+                                        may
+                                        have to pay an additional cost for certain special requests or any amendments
+                                        you
+                                        want to make to your journey.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        How do I pay?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        You pay for your airport taxi when you complete your booking online. This means
+                                        that
+                                        everything is confirmed and taken care of in advance so you don't need to worry
+                                        about any unpleasant surprises or having cash on you when you arrive. Currently,
+                                        we
+                                        accept Visa, American Express and Mastercard, as well as most major debit cards.
+                                        We
+                                        also accept payment via PayPal.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                        Can I cancel my booking?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Yes. You can always cancel your booking for free up to 24 hours prior to your
+                                        scheduled pick-up time. Some of our partners allow a shorter window for free
+                                        cancellation. Check your booking confirmation for more information.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="py-4 bg-primary">
+        <div class="container text-center">
+            <h5 class="text-white">Save time, save money!</h5>
+            <p class="lead fs-6">Sign up and we'll send the best deals to you</p>
+            <form class="row g-2 d-flex align-items-center justify-content-center">
+                <div class="col-auto">
+                    <label for="inputPassword2" class="visually-hidden">Password</label>
+                    <input type="email" class="form-control" id="inputPassword2" placeholder="Your Email Address">
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-info">Subscribe</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section class="bg-info">
+        <div class="text-center pt-3">
+            <a href="#" class="btn btn-sm btn-outline-light">List your property</a>
+        </div>
+        <hr />
+        <div class="container ps-5">
+            <a href="#" class="text-white">Mobile version</a>
+            <a href="#" class="text-white">Your account</a>
+            <a href="#" class="text-white">Make changes to your booking online</a>
+            <a href="#" class="text-white">Customer service help</a>
+            <a href="#" class="text-white">Become an affiliate</a>
+            <a href="#" class="text-white">Booking.com for Business</a>
+        </div>
+    </section>
+    <footer class="container">
+        <section id="footerLinks" class="my-3">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-2">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#">Countries</a>
+                        </li>
+                        <li>
+                            <a href="#">Regions</a>
+                        </li>
+                        <li>
+                            <a href="#">Cities</a>
+                        </li>
+                        <li>
+                            <a href="#">Districts</a>
+                        </li>
+                        <li>
+                            <a href="#">Airports</a>
+                        </li>
+                        <li>
+                            <a href="#">Hotels</a>
+                        </li>
+                        <li>
+                            <a href="#">Places of interest</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#">Homes</a>
+                        </li>
+                        <li>
+                            <a href="#">Apartments</a>
+                        </li>
+                        <li>
+                            <a href="#">Resorts</a>
+                        </li>
+                        <li>
+                            <a href="#">Villas</a>
+                        </li>
+                        <li>
+                            <a href="#">Hostels</a>
+                        </li>
+                        <li>
+                            <a href="#">B&Bs</a>
+                        </li>
+                        <li>
+                            <a href="#">Guest houses</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#">Unique places to stay</a>
+                        </li>
+                        <li>
+                            <a href="../Reviews/index2.html">Reviews</a>
+                        </li>
+                        <li>
+                            <a href="#">Unpacked: Travel articles</a>
+                        </li>
+                        <li>
+                            <a href="#">Travel Communities</a>
+                        </li>
+                        <li>
+                            <a href="#">Seasonal and holiday deals</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#">Car hire</a>
+                        </li>
+                        <li>
+                            <a href="#"> Flight finder</a>
+                        </li>
+                        <li>
+                            <a href="#">Restaurant reservations</a>
+                        </li>
+                        <li>
+                            <a href="#">Booking.com for Travel Agents</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#">Coronavirus (COVID-19) FAQs</a>
+                        </li>
+                        <li>
+                            <a href="#">About Booking.com</a>
+                        </li>
+                        <li>
+                            <a href="#">Customer Service help</a>
+                        </li>
+                        <li>
+                            <a href="#"> Partner help</a>
+                        </li>
+                        <li>
+                            <a href="#">Careers</a>
+                        </li>
+                        <li>
+                            <a href="#">Sustainability</a>
+                        </li>
+                        <li>
+                            <a href="#">Press centre</a>
+                        </li>
+                        <li>
+                            <a href="#">Safety resource centre</a>
+                        </li>
+                        <li>
+                            <a href="#">Investor relations</a>
+                        </li>
+                        <li>
+                            <a href="#">Terms & Conditions</a>
+                        </li>
+                        <li>
+                            <a href="#">Partner dispute</a>
+                        </li>
+                        <li>
+                            <a href="#">How we work</a>
+                        </li>
+                        <li>
+                            <a href="#">Privacy & Cookie Statement</a>
+                        </li>
+                        <li>
+                            <a href="#">MSA Statement</a>
+                        </li>
+                        <li>
+                            <a href="#">Corporate contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="mt-4">
+            <div class="text-center">
+                <a href="#" class="text-decoration-none">Extranet login</a>
+            </div>
+            <div class="my-4 ps-5">
+                <p class="fw-light">
+                    Copyright &copy; 1996-2023 Booking.com&trade;. All rights reserved.
+                </p>
+            </div>
+            <div class="my-1 text-center">
+                <p class="text-muted fw-light">
+                    Booking.com is part of Booking Holdings Inc., the world leader in online travel and related
+                    services.
+                </p>
+            </div>
+            <div class="my-2 text-center">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <img src="../../shared/booking-logo.png" width="96" height="26" />
+                    </li>
+                    <li class="list-inline-item">
+                        <img src="../../shared/priceline-logo.png" width="96" height="26" />
+                    </li>
+                    <li class="list-inline-item">
+                        <img src="../../shared/kayak-logo.png" width="96" height="26" />
+                    </li>
+                    <li class="list-inline-item">
+                        <img src="../../shared/agoda-logo.png" width="96" height="26" />
+                    </li>
+                    <li class="list-inline-item">
+                        <img src="../../shared/rentalcars-logo.png" width="96" height="26" />
+                    </li>
+                    <li class="list-inline-item">
+                        <img src="../../shared/opentable-logo.png" width="96" height="26" />
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </footer>
+
+    <script src="../../bootstrap-custom/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

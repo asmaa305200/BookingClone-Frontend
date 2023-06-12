@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="icon" href="../../shared/favico.ico">
+    <link href="../../bootstrap-custom/custom-scss/custom-bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/details.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-primary">
+            <div class="container">
+                <a class="navbar-brand fw-bold text-white" href="#">Booking.com</a>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="bg-warning-subtle my-2">
+            <div class="accordion accordion-flush" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#covidAccordion" aria-expanded="true" aria-controls="covidAccordion">
+                            <i class="bi bi-info-circle fs-4 me-1 text-gold"></i>
+                            Protecting you from COVID-19
+                        </button>
+                    </h2>
+                    <div id="covidAccordion" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p class="col-10 fw-light">
+                                Your safety matters. From July 2020, we're asking all customers to wear a face
+                                covering
+                                when travelling with us. If you don't wear a face covering, your driver may not be
+                                able
+                                to start your journey. Where Coronavirus may affect your plans, here's what you need
+                                to
+                                know about booking with us at this time.
+                                <a href="#">Read more</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="my-2">
+            <div class="row">
+                <aside class="col-lg-4">
+                    <div class="card rounded-0">
+                        <div class="card-header">
+                            <h6 class="fw-bold">Your booking details</h6>
+                        </div>
+                        <div class="card-body p-0">
+                            <ol class="list-group list-group-flush">
+                                <li class="list-group-item border-0">
+                                    <div class="ms-2 me-auto">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <p class="mb-1">From</p>
+                                            <small>
+                                                <a href="#">Edit trip</a>
+                                            </small>
+                                        </div>
+                                        <div id="from" class="fw-bold">Washington Dulles International Airport (IAD), 1
+                                            Saarinen
+                                            Cir, Dulles, VA 20166, USA</div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <div class="ms-2 me-auto">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <p class="mb-1">To</p>
+                                        </div>
+                                        <div id="to" class="fw-bold">The Westin Washington Dulles Airport, 2520 Wasser
+                                            Terrace,
+                                            Herndon, VA 20171, USA</div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="ms-2 me-auto">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <p class="mb-1">Passengers</p>
+                                        </div>
+                                        <div id="passengersNumber" class="fw-bold">1</div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <div class="ms-2 me-auto">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <p class="mb-1">Your trip</p>
+                                        </div>
+                                        <div class="fw-bold">Thu 26 Jan 2023 at 12:00</div>
+                                        <div class="d-grid gap-2 mt-3">
+                                            <button class="btn btn-outline-primary py-3" type="button">Add your
+                                                returns</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li
+                                    class="list-group-item list-group-item-success border-bottom border-success border-3">
+                                    <div>
+                                        <i class="bi bi-hand-thumbs-up-fill d-inline"></i>
+                                        <h6 class="d-inline fw-bold ps-1">Book smart</h6>
+                                    </div>
+                                    <p>
+                                        Customers booked 6,000 return trips every week in 2019*.
+                                    </p>
+                                    <p>*(Figure based on the average over 2019)</p>
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <div class="ms-2 me-auto">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h6 class="mb-1 fw-bold">Standard</h6>
+                                        </div>
+                                        <div>
+                                            <p>Up to 3 passengers</p>
+                                            <p>
+                                                Up to 3 medium suitcases
+                                                <i id="info-icon" class="bi bi-info-circle text-info"
+                                                    data-bs-tooltip="tooltip" data-bs-placement="bottom"
+                                                    data-bs-custom-class="custom-tooltip" data-bs-html="true"
+                                                    data-bs-title="This taxi can carry 3 suitcases measuring: <i>Text</i>"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <div class="ms-2 me-auto">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <p class="mb-1">Journey time</p>
+                                        </div>
+                                        <div class="fw-bold">About 19 mins</div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="ms-2 me-auto">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <p class="mb-1">Distance</p>
+                                        </div>
+                                        <div class="fw-bold">About 11.21 km</div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <div class="ms-2 me-auto">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <p class="mb-1">Total Price:</p>
+                                        </div>
+                                        <h2 class="fw-bold">£75.45</h2>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </aside>
+                <div class="col-lg-8">
+                    <section class="alert alert-primary alert-dismissible mt-1" role="alert">
+                        <span>
+                            <i class="bi bi-info-circle fs-4">
+                                <strong class="alert-heading fst-normal fs-5">Just so you know…</strong>
+                            </i>
+                        </span>
+                        <p class="mb-0">We've set your pick-up time to 12 noon at the airport closest to your
+                            accommodation.
+                        </p>
+                        <p class="mb-0">Not right? Edit your booking details to update your results</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </section>
+                    <section class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-sm-2 d-flex justify-content-center">
+                                <img src="assets/genius-globe.png" class="img-fluid rounded-start" width="96"
+                                    height="96">
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="card-body">
+                                    <h6 class="card-title fw-bold">Sign in to save with your Genius discount and enjoy
+                                        10% off this booking</h6>
+                                    <button class="btn btn-primary mt-2">Sign in</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="card mb-3">
+                        <span class="border-bottom border-top-0 border-3 border-primary">
+                            <div class="row g-0">
+                                <div class="col-sm-1 d-flex justify-content-center align-items-center">
+                                    <i class="bi bi-check-lg fs-1 bg-mint-ocean rounded-circle px-2"></i>
+                                </div>
+                                <div class="col-sm-11 ">
+                                    <div class="card-body">
+                                        <h6 class="card-title fw-bold">Trusted, secure and conveninent</h6>
+                                        <p class="fw-light">Every month, over 217,000 people ride with us.</p>
+                                        <button class="btn btn-outline-primary">Explore Booking.com Taxi</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </span>
+                    </section>
+                    <section class="card mb-3 py-2">
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">Choose your taxi</h6>
+                            <div class="d-flex justify-content-between">
+                                <span class="fw-bold">
+                                    <i class="bi bi-arrow-counterclockwise text-primary"></i>
+                                    Free Cancellation
+                                </span>
+                                <span class="fw-bold">
+                                    <i class="bi bi-airplane-fill text-primary"></i>
+                                    Flight tracking
+                                </span>
+                                <span class="fw-bold">
+                                    <i class="bi bi-hand-thumbs-up-fill text-primary"></i>
+                                    Tried and trusted drivers
+                                </span>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="card text-bg-primary mb-3 px-3">
+                        <div class="row">
+                            <div class="card-body col-sm-8">
+                                <h6 class="fw-bold">Heading back to Washington Dulles International Airport (IAD)?</h6>
+                                <p>Make it a return journey for an additional £75.45 (approximately)</p>
+                            </div>
+                            <div class="col-sm-4 d-grid p-3">
+                                <button class="btn btn-outline-light">Add your return</button>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-lg-1 d-flex justify-content-center">
+                                <i class="bi bi-shield-plus fs-1"></i>
+                            </div>
+                            <div class="card-body col-lg-11">
+                                <h6 class="fw-bold">Protecting you during COVID-19</h6>
+                                <p>To improve the safety of your journey, we ask all of our drivers to:</p>
+                                <ul>
+                                    <li>Wear a face covering</li>
+                                    <li>Maintain a safe distance and avoid handling luggage where possible</li>
+                                    <li>Clean cars between rides and make sure hand sanitiser is available</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="card mb-3">
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">Passenger details</h6>
+                            <form class="row g-3">
+                                <div class="col-md-2">
+                                    <label for="passengerTitle" class="form-label">Title</label>
+                                    <select id="passengerTitle" name="passengerTitle" class="form-select">
+                                        <option value="Mr" selected>Mr</option>
+                                        <option value="Mrs">Mrs</option>
+                                        <option value="Miss">Miss</option>
+                                        <option value="Ms">Ms</option>
+                                        <option value="Dr">Dr</option>
+                                        <option value="Prof">Prof</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-5">
+                                    <label for="passengerFirstName" class="form-label">First name</label>
+                                    <input type="text" name="passengerFirstName" class="form-control"
+                                        id="passengerFirstName" placeholder="Passenger first name">
+                                </div>
+                                <div class="col-md-5">
+                                    <label for="passengerLastName" class="form-label">Last name</label>
+                                    <input type="text" name="passengerLastName" class="form-control"
+                                        id="passengerLastName" placeholder="Passenger last name">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="passengerEmail" class="form-label">Email</label>
+                                    <input type="email" name="passengerEmail" class="form-control" id="passengerEmail"
+                                        placeholder="Passenger email address">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="passengerMobile" class="form-label">Mobile number</label>
+                                    <input type="tel" name="passengerMobile" class="form-control" id="passengerMobile">
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                    <section class="card mb-3">
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">Add flight details</h6>
+                            <p>Adding your flight details lets your taxi driver know <strong>exactly when and where to
+                                    meet you</strong></p>
+                            <form class="row g-3 mb-2">
+                                <div class="col-md-5">
+                                    <label for="flyFrom" class="form-label">Start searching for a departure
+                                        airport</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="basic-addon1">
+                                            <i class="bi bi-airplane"></i>
+                                        </span>
+                                        <input type="text" name="flyFrom" class="form-control" id="flyFrom"
+                                            placeholder="Where are you flying from?">
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <label for="flyTo" class="form-label">Flying to</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="basic-addon1">
+                                            <i class="bi bi-airplane"></i>
+                                        </span>
+                                        <input type="text" name="flyTo" class="form-control" id="flyTo"
+                                            placeholder="Where are you flying to?">
+                                        <span class="input-group-text" id="basic-addon2" data-bs-tooltip="tooltip"
+                                            data-bs-placement="bottom"
+                                            data-bs-title="To edit your arrival airport, please edit your trip details">
+                                            <i class="bi bi-info-circle text-primary"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </form>
+                            <hr>
+                            <div class="accordion accordion-flush" id="accordionExample">
+                                <div class="accordion-item border-bottom">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed fw-bold" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            Or, enter flight number manually
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label for="flightNumber" class="form-label">Enter flight
+                                                        number</label>
+                                                    <div class="input-group">
+                                                        <input type="text" name="flightNumber" class="form-control"
+                                                            id="flightNumber" placeholder="E.g. BA 316">
+                                                        <button class="btn btn-primary" type="button"
+                                                            id="button-addon2">Add</button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p class="fw-light">You can usually find this on a confirmation
+                                                        email from the
+                                                        company you booked with</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="card mb-3">
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">Add a note for the driver</h6>
+                            <form class="mb-3">
+                                <label for="comments" class="mb-2">Any requests?</label>
+                                <textarea class="form-control"
+                                    placeholder="Things like 'I need a child seat', Please hold a sign that says...'"
+                                    id="comments" rows="3" maxlength="500"></textarea>
+                            </form>
+                            <div class="card border-0 bg-warning-subtle">
+                                <span class="border-warning border-bottom border-3">
+                                    <div class="card-body">
+                                        <div class="card-title ">
+                                            <i class="bi bi-exclamation-circle-fill text-warning">
+                                                <span class="fst-normal fw-bold text-dark">
+                                                    Travelling with children?
+                                                </span>
+                                            </i>
+                                        </div>
+                                        <p class="card-text">
+                                            In this country, it's illegal for little ones to travel
+                                            without
+                                            a baby seat, child seat or booster seat. Please let us know how many
+                                            children
+                                            are with you and how old they are, so we can tell the taxi company ahead of
+                                            your
+                                            trip. We need 2 working days to arrange this, as child seats are in short
+                                            supply.
+                                        </p>
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="mb-3 text-end">
+                        <button class="btn btn-primary btn-lg">Continue to book</button>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section class="bg-secondary py-3">
+            <div class="container py-3">
+                <div id="footerLinks" class="row d-flex justify-content-start">
+                    <div class="col-lg-4">
+                        <ul class="list-unstyled">
+                            <li class="fw-bold text-white mb-2">Help & Information</li>
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">About us</a>
+                            </li>
+                            <li>
+                                <a href="#">Help</a>
+                            </li>
+                            <li>
+                                <a href="#">Terms and Conditions</a>
+                            </li>
+                            <li>
+                                <a href="#">Privacy Notice</a>
+                            </li>
+                            <li>
+                                <a href="#">Cookie Statement</a>
+                            </li>
+                            <li>
+                                <a href="#">Modern Slavery Statement</a>
+                            </li>
+                            <li>
+                                <a href="#">Affiliate Programme</a>
+                            </li>
+                            <li>
+                                <a href="#">Partner Programme</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <ul class="list-unstyled">
+                            <li class="fw-bold text-white mb-2">Popular Airport Transfers</li>
+                            <li>
+                                <a href="#">Heathrow Airport Transfers</a>
+                            </li>
+                            <li>
+                                <a href="#">Gatwick Airport Transfers</a>
+                            </li>
+                            <li>
+                                <a href="#">Manchester Airport Transfers</a>
+                            </li>
+                            <li>
+                                <a href="#">Birmingham Airport Transfers</a>
+                            </li>
+                            <li>
+                                <a href="#">Liverpool Airport Transfers</a>
+                            </li>
+                            <li>
+                                <a href="#">Airport Transfers</a>
+                            </li>
+                            <li>
+                                <a href="#">Chauffeur Service</a>
+                            </li>
+                            <li>
+                                <a href="#">Minibus Service</a>
+                            </li>
+                            <li>
+                                <a href="#">Taxi Service</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-primary py-3">
+            <p class="text-center fw-light text-white mb-0">&copy; 2023 Booking.com Transport Ltd</p>
+        </section>
+    </footer>
+
+    <script src="../../bootstrap-custom/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/details.js"></script>
+</body>
+
+</html>

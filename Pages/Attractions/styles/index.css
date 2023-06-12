@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#d1 {
+    height: 250px;
+    background-color: rgb(202, 215, 224);
+}
+
+#bar {
+    position: relative;
+    border-radius: 8px;
+    padding: 4px;
+    width: 770px;
+}
+
+#in1 {
+    height: 49px;
+    border-radius: 8px;
+}
+
+#in2 {
+    width: 90px;
+    height: 389x;
+    border-radius: 8px;
+}
+
+#in3 {
+    width: 15px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: rgb(27, 37, 73);
+}
+
+#d3 {
+    background-color: rgba(230, 222, 222, 0.623);
+    height: 60px;
+    border: 15px;
+    border-color: rgb(90, 35, 35);
+    border-radius: 20px;
+    padding: 15px;
+    margin: 20px;
+    margin-left: 10px;
+}
+
+#d4 {
+    background-color: rgba(230, 222, 222, 0.623);
+    width: 900px;
+    height: 125px;
+    border: 15px;
+    border-color: rgb(90, 35, 35);
+    border-radius: 20px;
+    padding: 19px;
+    margin-left: 115px;
+}
+
+h4 {
+    font-size: medium;
+}
+
+.nv:hover {
+    background-color: rgb(8, 8, 32);
+    border-radius: 25px;
+}
+
+.l2:hover {
+    background-color: rgb(112, 112, 172);
+}
+
+.nv {
+    border: 2px white;
+    border-radius: 25px;
+}
+
+#att {
+    border-radius: 20px;
+    background-color: rgb(5, 5, 51);
+}
+
+
+.pointer {
+    cursor: pointer;
+    width: 347px;
+    height: 195px;
+    border-radius: 20px;
+}
+
+.pointerr {
+    cursor: pointer;
+    width: 257px;
+    height: 144px;
+    border-radius: 20px;
+}
+
+footer {
+    background-color: rgb(202, 215, 224);
+    margin-top: 25px;
+}
+
+.pointer:hover {
+    transform: scale(1, 1.05);
+}
+
+.pointerr:hover {
+    transform: scale(1, 1.04)
+}

@@ -1,0 +1,25 @@
+.thumbnail:hover {
+    background-color: rgba(255, 255, 255, 0.083);
+    color: white;
+    border-radius: 25px;
+}
+
+.thumb:hover {
+    background-color: rgba(255, 255, 255, 0.107);
+    color: white;
+    border-radius: 0px;
+
+}
+
+.nav-link a.active {
+    background-color: rgba(255, 255, 255, 0.557);
+    color: white;
+    border-radius: 25px;
+
+}
+
+.topshadow:hover {
+    border: 3px;
+    border-radius: 10px;
+    border-color: rgb(7, 7, 7);
+}

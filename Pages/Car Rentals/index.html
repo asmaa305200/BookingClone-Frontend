@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cheap car rentals: Find best car deals & worldwide locations</title>
+  <link rel="icon" href="../../shared/favico.ico">
+  <link href="../../bootstrap-custom/custom-scss/custom-bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+  <header class="bg-body-tertiary">
+    <nav class="navbar bg-primary">
+      <div class="container">
+        <a class="navbar-brand text-white fw-bold">Booking.com</a>
+        <form class="d-flex">
+          <button class="btn btn-outline-light border-0 mx-1" data-bs-toggle="modal" data-bs-target="#currenciesModal"
+            data-bs-tooltip="tooltip" data-bs-placement="bottom" data-bs-title="Choose your currency">
+            EGP
+          </button>
+          <div class="modal fade" id="currenciesModal" tabindex="-1" aria-labelledby="currenciesModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5 fw-bold" id="currenciesModalLabel">Select your currency
+                  </h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <h6 class="fw-bold mb-3">All currencies</h6>
+                  <div id="currencyModal" class="row">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-outline-light border-0 mx-1" data-bs-toggle="modal" data-bs-target="#languagesModal"
+            data-bs-tooltip="tooltip" data-bs-placement="bottom" data-bs-title="Choose your language">
+            <i class="fi fi-gb fs-5"></i>
+          </button>
+          <div class="modal fade" id="languagesModal" tabindex="-1" aria-labelledby="languagesModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5 fw-bold" id="languagesModalLabel">Select your language
+                  </h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <h6 class="fw-bold mb-3">All languages</h6>
+                  <div id="languageModal" class="row"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-outline-light border-0 mx-1" data-bs-tooltip="tooltip" data-bs-placement="bottom"
+            data-bs-title="Contact Customer Service">
+            <i class="bi bi-question-circle fs-5"></i>
+          </button>
+          <a href="#" class="btn btn-outline-light border mx-1">Manage booking</a>
+          <a href="#" class="btn btn-light mx-1">Register</a>
+          <a href="#" class="btn btn-light">Sign in</a>
+        </form>
+      </div>
+    </nav>
+    <nav class="navbar bg-primary">
+      <div class="container">
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="../Stays/index.html">
+              <i class="bi bi-tree"></i>
+              Stays
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">
+              <i class="bi bi-airplane"></i>
+              Flights
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active rounded-5 border" href="index.html">
+              <i class="bi bi-car-front"></i>
+              Car rentals
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="../Attractions/index.html">
+              <i class="bi bi-binoculars-fill"></i>
+              Attractions
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="../Airport Taxis/index.html">
+              <i class="bi bi-taxi-front-fill"></i>
+              Airport Taxis
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- car hire for any kind of trip -->
+  <section id="searchForm" class="container px-5 my-5">
+    <h3>Car hire for any kind of trip</h3>
+    <p>Compare deals from the biggest car hire companies</p>
+    <form class="">
+      <div class="my-3">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" value="oneway" name="reservationType" id="onewayRadio" checked>
+          <label class="form-check-label" for="onewayRadio">
+            Return to same location
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" value="return" name="reservationType" id="returnRadio">
+          <label class="form-check-label" for="returnRadio">
+            Return to different location
+          </label>
+        </div>
+      </div>
+      <div class="text-bg-warning p-1 rounded-1">
+        <form>
+          <div class="input-group">
+            <span class="input-group-text" id="addon-wrapping">
+              <i class="bi bi-geo-alt-fill"></i>
+            </span>
+            <input type="text" class="form-control" placeholder="Enter pickup Location">
+            <input type="text" class="form-control" placeholder="Drop-off Location" id="displayGrop-off" hidden>
+            <input type="date" class="form-control">
+            <input type="date" class="form-control">
+
+
+            <button class="btn btn-primary px-4 returnHide" type="button">Search</button>
+          </div>
+        </form>
+        <br class="returnShow" hidden />
+        <form class="returnShow" action="" hidden>
+          <div class="input-group">
+            <span class="input-group-text" id="addon-wrapping">
+              <i class="bi bi-geo-alt-fill"></i>
+            </span>
+            <input type="text" class="form-control" placeholder="Enter pickup Location">
+
+            <input type="date" class="form-control">
+            <input type="date" class="form-control">
+            <span class="input-group-text" id="addon-wrapping">
+              <i class="bi bi-person"></i>
+            </span>
+            <input type="number" class="form-control" min="1" max="16" value="1">
+            <button class="btn btn-primary px-4" type="button">Search</button>
+          </div>
+        </form>
+
+      </div>
+      <div>
+        <input type="checkbox" class="form-check-input border border-grey border-3 p-2 mx-2 my-3" id="ageCheck" checked>
+        <label class="form-check-label my-3 " for=" ageCheck">
+          Driver aged between 30 - 65
+        </label>
+        <i class="bi bi-info-circle  text-gold fs-5 m-2" onclick="ageCheck() "></i>
+        <div id="ageInfo" hidden>
+          <label class="form-check-label my-3 " for=" ageCheck">
+            Driver's Age
+          </label>
+          <input type="text " class="">
+        </div>
+      </div>
+    </form>
+  </section>
+  <!-- End car hire for any kind of trip -->
+
+
+
+
+  <!--  Clean Car  -->
+  <section class="container">
+
+    <div class="alert alert-light" role="alert">
+
+      <i class="bi bi-info-circle fs-4"></i>
+      <strong class="mx-1">Sign in to save 10% with Genius</strong>
+      <p class="fw-lighter mx-3">We're working with our partners to keep you safe and in the driving seat. <a href="#"
+          class="text-decoration-none"> -Learn more</a></p>
+
+
+    </div>
+
+
+    <div class="alert alert-light alert-dismissible fade show " role="alert">
+      <div class="row">
+        <div class="col-lg-1 col-sm-3">
+          <svg width="100" height="130" viewBox="0 0 120 145" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d)">
+              <path
+                d="M76.7188 0C76.7188 9.31784 69.1667 16.8718 59.8496 16.875H59.8379C50.5208 16.8718 42.9688 9.31784 42.9688 0H13.4375C8.7776 0 5 3.7776 5 8.4375V126.562C5 131.222 8.77759 135 13.4375 135H42.9688C42.9688 125.68 50.5239 118.125 59.8438 118.125C69.1636 118.125 76.7188 125.68 76.7188 135L106.25 135C110.91 135 114.688 131.222 114.688 126.562V8.4375C114.688 3.7776 110.91 0 106.25 0H76.7188Z"
+                fill="#004CB8" />
+              <g clip-path="url(#clip0)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M40.396 41.0688L41.8218 42.4946L44.5457 35.22C44.9981 34.0124 45.8087 32.972 46.869 32.238C47.9292 31.504 49.1885 31.1116 50.4759 31.1133H69.2114C70.4993 31.1133 71.7567 31.5065 72.8155 32.2404C73.8739 32.9742 74.6831 34.0137 75.1353 35.2202L77.861 42.4993L79.2915 41.0688C79.5882 40.7721 79.9906 40.6054 80.4102 40.6054H83.5742C84.4479 40.6054 85.1562 41.3137 85.1562 42.1875C85.1562 43.0612 84.4479 43.7695 83.5742 43.7695H81.0655L79.4834 45.3515L83.5752 49.4434C84.0164 49.8848 84.3733 50.3946 84.6356 50.9481C84.6622 50.9989 84.686 51.0514 84.7071 51.1053C85.0001 51.7784 85.1558 52.5108 85.1562 53.2596V58.0078C85.1562 59.2665 84.6563 60.4738 83.7662 61.3639C83.2609 61.8692 82.6534 62.2487 81.9922 62.4825V64.3359C81.9922 65.5946 81.4922 66.802 80.6022 67.692C79.7121 68.582 78.5048 69.082 77.2461 69.082C75.9874 69.082 74.78 68.582 73.89 67.692C73 66.802 72.5 65.5946 72.5 64.3359V62.7539H47.1875V64.3359C47.1875 65.5946 46.6874 66.8019 45.7974 67.692C44.9074 68.582 43.7002 69.082 42.4414 69.082C41.1827 69.082 39.9755 68.582 39.0854 67.692C38.1954 66.8019 37.6953 65.5946 37.6953 64.3359V62.4825C37.0342 62.2487 36.4267 61.8692 35.9214 61.3639C35.0313 60.4738 34.5312 59.2665 34.5312 58.0078V53.2586C34.5317 52.5126 34.6865 51.7827 34.9779 51.1113C35.0002 51.0532 35.0259 50.9968 35.0547 50.9422C35.3168 50.391 35.6728 49.8831 36.1126 49.443L40.2041 45.3515L38.622 43.7695H36.1133C35.2395 43.7695 34.5312 43.0612 34.5312 42.1875C34.5312 41.3137 35.2395 40.6054 36.1133 40.6054H39.2773C39.6969 40.6054 40.0993 40.7721 40.396 41.0688ZM80.4102 59.5898C80.8298 59.5898 81.2323 59.4231 81.5289 59.1265C81.8255 58.8299 81.9922 58.4274 81.9922 58.0078V53.2617H75.3923C74.9731 53.2618 74.5709 53.4284 74.2747 53.7243L72.0366 55.9624C71.4188 56.5802 70.4171 56.5802 69.7993 55.9624C69.1815 55.3446 69.1815 54.3429 69.7993 53.7251L72.0378 51.4866C72.9274 50.5975 74.1338 50.0979 75.392 50.0976H79.7549L76.5908 46.9336H43.0967L39.9326 50.0976H44.2957C45.5535 50.0979 46.7598 50.5975 47.6499 51.487L49.8879 53.7251C50.5057 54.3429 50.5057 55.3446 49.8879 55.9624C49.2701 56.5802 48.2684 56.5802 47.6506 55.9624L45.4129 53.7247C45.1163 53.4283 44.7142 53.2618 44.2953 53.2617H37.6953V58.0078C37.6953 58.4274 37.862 58.8299 38.1587 59.1265C38.4553 59.4232 38.8577 59.5898 39.2773 59.5898H80.4102ZM75.6641 62.7539V64.3359C75.6641 64.7556 75.8307 65.1581 76.1273 65.4547C76.4239 65.7513 76.8264 65.9179 77.2461 65.9179C77.6657 65.9179 78.0682 65.7513 78.3648 65.4547C78.6614 65.1581 78.8281 64.7556 78.8281 64.3359V62.7539H75.6641ZM40.8594 62.7539H44.0234V64.3359C44.0234 64.7555 43.8567 65.158 43.5601 65.4547C43.2634 65.7513 42.8611 65.9179 42.4414 65.9179C42.0218 65.9179 41.6194 65.7513 41.3227 65.4547C41.0261 65.158 40.8594 64.7555 40.8594 64.3359V62.7539ZM44.723 43.7695H74.958L72.1723 36.3301C71.9463 35.7271 71.5417 35.2074 71.0129 34.8408C70.4836 34.4739 69.8551 34.2773 69.2114 34.2773L50.4738 34.2773C49.8293 34.2765 49.1999 34.4726 48.6699 34.8395C48.14 35.2064 47.7348 35.7264 47.5088 36.3298L44.723 43.7695Z"
+                  fill="white" />
+                <path
+                  d="M37.4976 96.4251V93.0509H29.3773V96.4251H37.4976ZM45.6796 101.938H49.4122V84.1026H45.692L41.0818 87.279V90.752L45.4572 87.7363H45.6796V101.938ZM61.228 102.395C65.6404 102.395 68.3101 98.897 68.3101 93.0015C68.3101 87.0812 65.6033 83.6453 61.228 83.6453C56.8404 83.6453 54.146 87.0812 54.146 92.9891C54.146 98.9094 56.8156 102.395 61.228 102.395ZM61.228 99.3543C59.1887 99.3543 57.928 97.2161 57.928 92.9891C57.928 88.7992 59.201 86.6981 61.228 86.6981C63.2674 86.6981 64.528 88.7869 64.528 92.9891C64.528 97.2161 63.2797 99.3543 61.228 99.3543ZM74.8112 92.4577C77.4809 92.4577 79.0506 90.8509 79.0506 88.0947C79.0506 85.4003 77.4438 83.7565 74.8112 83.7565C72.191 83.7565 70.5719 85.4127 70.5719 88.0947C70.5719 90.8386 72.1416 92.4577 74.8112 92.4577ZM74.8112 90.2453C73.909 90.2453 73.3899 89.4666 73.3899 88.1071C73.3899 86.7846 73.9214 85.9812 74.8112 85.9812C75.6888 85.9812 76.2202 86.7846 76.2202 88.1071C76.2202 89.4543 75.7135 90.2453 74.8112 90.2453ZM76.6405 101.938L88.4933 84.1026H85.6383L73.7854 101.938H76.6405ZM87.4675 102.148C90.1372 102.148 91.7068 100.541 91.7068 97.7847C91.7068 95.0903 90.1001 93.4588 87.4675 93.4588C84.8473 93.4588 83.2281 95.1026 83.2281 97.7847C83.2281 100.541 84.8102 102.148 87.4675 102.148ZM87.4675 99.9352C86.5652 99.9352 86.0585 99.1566 86.0585 97.797C86.0585 96.4745 86.5776 95.6712 87.4675 95.6712C88.3574 95.6712 88.8889 96.4745 88.8889 97.797C88.8889 99.1442 88.3698 99.9352 87.4675 99.9352Z"
+                  fill="white" />
+              </g>
+            </g>
+            <defs>
+              <filter id="filter0_d" x="0.429688" y="0" width="118.828" height="144.141" filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                <feOffset dy="4.57031" />
+                <feGaussianBlur stdDeviation="2.28516" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+              </filter>
+              <clipPath id="clip0">
+                <rect width="109.688" height="84.375" fill="white" transform="translate(5 25.3125)" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <div class="col-lg-11 col-sm-9 mt-4 ">
+          <strong>Sign in to save 10% with Genius</strong>
+          <p class="fw-light"> You're eligible for discounts on select car rentals<a href="#" class="p-2">-sign in
+              now!</a>
+          </p>
+        </div>
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  </section>
+  <!-- End Clean Car  -->
+
+  <!-- Popular car hire brands -->
+  <section>
+    <div class="text-center">
+      <ul>
+        <li class="d-inline-block mx-2 ">
+          <div class="border border-2 my-3 p-3 ">
+            <img src="CarRentalsImages/alamo_logo_lrg.gif">
+          </div>
+        </li>
+
+        <li class="d-inline-block mx-2">
+          <div class="border border-2 my-3 p-3 ">
+            <img src="CarRentalsImages/avis_logo_lrg.gif">
+          </div>
+        </li>
+
+        <li class="d-inline-block mx-2">
+          <div class="border border-2 my-3 p-3 ">
+            <img src="CarRentalsImages/dollar_logo_lrg.gif">
+          </div>
+        </li>
+        <li class="d-inline-block mx-2">
+          <div class="border border-2 my-3 p-3 ">
+            <img src="CarRentalsImages/enterprise_logo_lrg.gif">
+          </div>
+        </li>
+        <li class="d-inline-block mx-2">
+          <div class="border border-2 my-3 p-3 ">
+            <img src="CarRentalsImages/europcar_logo_lrg.gif">
+          </div>
+        </li>
+        <li class="d-inline-block mx-2">
+          <div class="border border-2 my-3 p-3 ">
+            <img src="CarRentalsImages/sicily_by_car_logo_lrg.gif">
+          </div>
+        </li>
+        <li class="d-inline-block mx-2">
+          <div class="border border-2 my-3 p-3 ">
+            <img src="CarRentalsImages/sixt_logo_lrg.gif">
+          </div>
+        </li>
+        <li class="d-inline-block mx-2">
+          <div class="border border-2 my-3 p-3 ">
+            <img src="CarRentalsImages/thrifty_logo_lrg.gif">
+          </div>
+        </li>
+      </ul>
+    </div>
+
+
+  </section>
+
+  <!-- End Popular car hire brands -->
+
+
+  <!-- Popular destinations for car hire -->
+
+  <section class="container">
+
+    <div class="container ">
+      <h3 class="mx-3 mb-3 fw-light">Popular destinations for car hire
+      </h3>
+      <div class="row container ">
+        <div class="col-4 ">
+          <div class="card ">
+            <img src="CarRentalsImages/240_F_104107186_Tx47eoKzoKqhwrCvAEZV1E5hrRmS2k5M.jpg" class="card-img-top ">
+            <div class="card-body">
+              <h4 class="fs-5"><a href="index2.html" class="text-decoration-none text-dark"> London</a> </h4>
+              <h6 class="my-3 ">Car hire in 75 pick-up locations</h6>
+              <i class="bi bi-ev-front-fill  my-2 "></i> <span class="">From EGP 501.30 per day</span>
+              <a href="#" class="text-decoration-none d-block my-2">Search rental cars in London</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="card">
+            <img src="CarRentalsImages/paris.jpg" class="card-img-top">
+            <div class="card-body">
+              <h4 class="fs-5">Paris</h4>
+              <h6 class="my-3">Car hire in 75 pick-up locations</h6>
+              <i class="bi bi-ev-front-fill  my-2 "></i> <span class="">From EGP 501.30 per day</span>
+              <a href="#" class="text-decoration-none d-block my-2">Search rental cars in paris</a>
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="card">
+            <img src="CarRentalsImages/madrid.jpg" class="card-img-top">
+            <div class="card-body">
+              <h4 class="fs-5">madrid</h4>
+              <h6 class="my-3">Car hire in 75 pick-up locations</h6>
+              <i class="bi bi-ev-front-fill  my-2 "></i> <span class="">From EGP 501.30 per day</span>
+              <a href="#" class="text-decoration-none d-block my-2">Search rental cars in madrid</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4 my-4">
+          <div class="card">
+            <img src="CarRentalsImages/dubai.jpg" class="card-img-top">
+            <div class="card-body">
+              <h4 class="fs-5">Dubai</h4>
+              <h6 class="my-2">Car hire in 75 pick-up locations</h6>
+              <i class="bi bi-ev-front-fill  my-2 "></i> <span class="">From EGP 501.30 per day</span>
+              <a href="#" class="text-decoration-none d-block my-2 ">Search rental cars in London</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4 my-4">
+          <div class="card">
+            <img src="CarRentalsImages/malaga2.jpg" class="card-img-top">
+            <div class="card-body">
+              <h4 class="fs-5">Malaga</h4>
+              <h6 class="my-2">Car hire in 75 pick-up locations</h6>
+              <i class="bi bi-ev-front-fill  my-2 "></i> <span class="">From EGP 501.30 per day</span>
+              <a href="#" class="text-decoration-none d-block my-2">Search rental cars in London</a>
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-4 my-4">
+          <div class="card">
+            <img src="CarRentalsImages/lisbon.jpg" class="card-img-top">
+            <div class="card-body">
+              <h4 class="fs-5">Lisbon</h4>
+              <h6 class="my-2">Car hire in 75 pick-up locations</h6>
+              <i class="bi bi-ev-front-fill  my-2 "></i> <span class="">From EGP 501.30 per day</span>
+              <a href="#" class="text-decoration-none d-block my-2 ">Search rental cars in London</a>
+
+            </div>
+
+          </div>
+        </div>
+  </section>
+
+  <!-- customer service -->
+  <section class="  my-3 " id="backgroundColor">
+    <div class="container">
+      <div class="row ">
+        <div class="col-4">
+          <div class="row ">
+            <div class="col-1 my-2">
+              <i class="bi bi-headphones fs-2 fw-bolder"></i>
+            </div>
+            <div class="col-11">
+              <p class="my-2">24/7 customer service</p>
+              <p>We're here to help if you need</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="row">
+            <div class="col-1 my-2 ">
+              <i class="bi bi-check2 fs-2 fw-bolder "></i>
+            </div>
+            <div class="col-11">
+              <p class="my-2"> 24/7 customer service</p>
+              <p>We're here to help if you need</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="row">
+            <div class="col-1  my-2">
+              <i class="bi bi-star  fs-3 fs-2 fw-bolder"></i>
+            </div>
+            <div class="col-11 ">
+              <p class="my-2">24/7 customer service</p>
+              <p>We're here to help if you need</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--   Frequently asked questions -->
+  <section class="container">
+    <h3 class="mx-2 mb-3 fw-light">Frequently asked questions
+    </h3>
+    <div class="container border my-3 ">
+
+      <div class="accordion accordion-flush " id="accordionFlushExample">
+        <div class="accordion-item p-1">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed  fs-5" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              What do I need to rend a car ?
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse " aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <p>When you're booking the car, you just need a debit or credit card.</p>
+              <p>At the rental counter, you'll need:</p>
+              <ul>
+                <li>Your passport</li>
+                <li>Your voucher</li>
+                <li>Each driver's driving licence</li>
+                <li>The main driver's credit card (some rental companies also accept debit cards, but most don't).</li>
+              </ul>
+              <p>Important: Please make sure you check the car's rental terms as well, as each rental company has its
+                own rules. For example? They might need to see some extra ID. They might not accept certain types of
+                credit card. Or they might not rent to any driver who hasn't held their driving licence for 36 months or
+                more.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item p-1">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed  fs-5" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Am I old enough to rent a car?
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Most companies will rent you a car if you're at least 21 (and some will rent to
+              younger drivers). But if you're under 25, you might still have to pay a 'young driver fee'.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item p-1">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed  fs-5" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Can I book a car for my parent,friend,colleague ,etc?
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Of course. Just put their details in the 'Driver Details' form when you're
+              booking the car.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item p-1">
+          <h2 class="accordion-header" id="flush-headingFour">
+            <button class="accordion-button collapsed  fs-5" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+              Any tips on choosing the right car?
+            </button>
+          </h2>
+          <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <ul>
+                <li>Think about where you're going. An SUV might be great for cruising down a Texas freeway, but a
+                  smaller car's probably much easier to drive in Rome.</li>
+                <li>See what other people think. You'll find lots of reviews and ratings on our site, so find out what
+                  other customers liked (and didn't like) about each rental company.</li>
+                <li>Don't forget the gearbox. In some countries, nearly everyone drives a manual car. In others,
+                  automatics are the norm. Make sure you rent one you can drive!</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item p-1">
+          <h2 class="accordion-header" id="flush-headingFive">
+            <button class="accordion-button collapsed  fs-5" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+              Can I book a car for my parent,friend,colleague ,etc?
+            </button>
+          </h2>
+          <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <p>The price you see includes the car, mandatory cover (e.g. Theft Protection and Collision Damage Waiver)
+                and fees that, if they apply, are usually payable at pick-up (e.g. any one-way fees, airport surcharges
+                or local taxes).</p>
+              <p>It also includes any extras you've already added (e.g. GPS or baby seats).</p>
+              <p>It doesn't include any extra cover you buy when you get to the rental counter.</p>
+              <p>Tip: There's a full price breakdown on the Payment page.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--  End Frequently asked questions -->
+
+  <!-- Top worldwide locations for car rental -->
+  <section class="container">
+    <div class="row g-3  ">
+      <div class="col-lg-3 col-sm-6 ">
+        <div class="card bg-dark text-white border-0">
+          <img src="CarRentalsImages/big-ben-houses-parliament-london-uk.jpg" class="card-img " alt="">
+          <div class="card-img-overlay  text-black ">
+
+            <h5 class="card-text " onmouseover="colorChange(this)" onmouseleave="colorBack(this)"> Milano</h5>
+            <p class=" card-text fw-semibold fs-5 " onmouseover="colorChange(this)" onmouseleave="colorBack(this)">
+              Car hire from EGP 263.74 per day
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-sm-6 ">
+        <div class="card bg-dark text-white border-0">
+          <img src="CarRentalsImages/breathtaking-shot-colosseum-amphitheatre-located-rome-italy.jpg" class="card-img"
+            alt="">
+          <div class="card-img-overlay  text-black ">
+            <h5 class="card-text " onmouseover="colorChange(this)" onmouseleave="colorBack(this)"> Milano</h5>
+            <p class="card-text fw-semibold fs-5" id="colorChange" onmouseover="colorChange(this)"
+              onmouseleave="colorBack(this)">
+              Car hire from EGP 263.74 per day</p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-sm-6 ">
+        <div class="card bg-dark text-white border-0">
+          <img src="CarRentalsImages/view-dubai-with-sun-sunrise-uae.jpg" class="card-img" alt="">
+          <div class="card-img-overlay  text-black ">
+            <div class=""> <!--backgroung -->
+              <h5 class="card-text " id="colorChange" onmouseover="colorChange(this)" onmouseleave="colorBack(this)">
+                Milano </h5>
+              <p class="card-text fw-semibold fs-5" id="colorChange" onmouseover="colorChange(this)"
+                onmouseleave="colorBack(this)">
+                Car hire from EGP 263.74 per day</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-sm-6 ">
+        <div class="card bg-dark text-white border-0">
+          <img src="CarRentalsImages/photo-canal-city.jpg" class="card-img" alt="">
+          <div class="card-img-overlay  text-black  ">
+            <h5 class="card-text " id="colorChange" onmouseover="colorChange(this)" onmouseleave="colorBack(this)">
+              Milano </h5>
+            <p class="card-text fw-semibold fs-5  " id="colorChange" onmouseover="colorChange(this)"
+              onmouseleave="colorBack(this)">
+              Car hire from EGP 263.74 per day</p>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- End Top worldwide locations for car rental -->
+
+  <!-- subscribe section -->
+  <section class="py-4 bg-primary mt-5">
+    <div class="container text-center">
+      <h5 class="text-white">Save time, save money!</h5>
+      <p class="lead fs-6">Sign up and we'll send the best deals to you</p>
+      <form class="row g-2 d-flex align-items-center justify-content-center">
+        <div class="col-auto">
+          <label for="inputPassword2" class="visually-hidden">Password</label>
+          <input type="email" class="form-control" id="inputPassword2" placeholder="Your Email Address">
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-info">Subscribe</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <section class="bg-info">
+    <div class="text-center pt-3">
+      <a href="#" class="btn btn-sm btn-outline-light">List your property</a>
+    </div>
+    <hr />
+    <div class="container ps-5">
+      <a href="#" class="text-white">Mobile version</a>
+      <a href="#" class="text-white">Your account</a>
+      <a href="#" class="text-white">Make changes to your booking online</a>
+      <a href="#" class="text-white">Customer service help</a>
+      <a href="#" class="text-white">Become an affiliate</a>
+      <a href="#" class="text-white">Booking.com for Business</a>
+    </div>
+  </section>
+
+  <!--Foteeerrrr-->
+  <footer class="container">
+    <section id="footerLinks" class="my-3">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-2">
+          <ul class="list-unstyled">
+            <li>
+              <a href="#">Countries</a>
+            </li>
+            <li>
+              <a href="#">Regions</a>
+            </li>
+            <li>
+              <a href="#">Cities</a>
+            </li>
+            <li>
+              <a href="#">Districts</a>
+            </li>
+            <li>
+              <a href="#">Airports</a>
+            </li>
+            <li>
+              <a href="#">Hotels</a>
+            </li>
+            <li>
+              <a href="#">Places of interest</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-2">
+          <ul class="list-unstyled">
+            <li>
+              <a href="#">Homes</a>
+            </li>
+            <li>
+              <a href="#">Apartments</a>
+            </li>
+            <li>
+              <a href="#">Resorts</a>
+            </li>
+            <li>
+              <a href="#">Villas</a>
+            </li>
+            <li>
+              <a href="#">Hostels</a>
+            </li>
+            <li>
+              <a href="#">B&Bs</a>
+            </li>
+            <li>
+              <a href="#">Guest houses</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-2">
+          <ul class="list-unstyled">
+            <li>
+              <a href="#">Unique places to stay</a>
+            </li>
+            <li>
+              <a href="../Reviews/index2.html">Reviews</a>
+            </li>
+            <li>
+              <a href="#">Unpacked: Travel articles</a>
+            </li>
+            <li>
+              <a href="#">Travel Communities</a>
+            </li>
+            <li>
+              <a href="#">Seasonal and holiday deals</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-2">
+          <ul class="list-unstyled">
+            <li>
+              <a href="#">Car hire</a>
+            </li>
+            <li>
+              <a href="#"> Flight finder</a>
+            </li>
+            <li>
+              <a href="#">Restaurant reservations</a>
+            </li>
+            <li>
+              <a href="#">Booking.com for Travel Agents</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-2">
+          <ul class="list-unstyled">
+            <li>
+              <a href="#">Coronavirus (COVID-19) FAQs</a>
+            </li>
+            <li>
+              <a href="#">About Booking.com</a>
+            </li>
+            <li>
+              <a href="#">Customer Service help</a>
+            </li>
+            <li>
+              <a href="#"> Partner help</a>
+            </li>
+            <li>
+              <a href="#">Careers</a>
+            </li>
+            <li>
+              <a href="#">Sustainability</a>
+            </li>
+            <li>
+              <a href="#">Press centre</a>
+            </li>
+            <li>
+              <a href="#">Safety resource centre</a>
+            </li>
+            <li>
+              <a href="#">Investor relations</a>
+            </li>
+            <li>
+              <a href="#">Terms & Conditions</a>
+            </li>
+            <li>
+              <a href="#">Partner dispute</a>
+            </li>
+            <li>
+              <a href="#">How we work</a>
+            </li>
+            <li>
+              <a href="#">Privacy & Cookie Statement</a>
+            </li>
+            <li>
+              <a href="#">MSA Statement</a>
+            </li>
+            <li>
+              <a href="#">Corporate contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="mt-4">
+      <div class="text-center">
+        <a href="#" class="text-decoration-none">Extranet login</a>
+      </div>
+      <div class="my-4 ps-5">
+        <p class="fw-light">
+          Copyright &copy; 1996-2023 Booking.com&trade;. All rights reserved.
+        </p>
+      </div>
+      <div class="my-1 text-center">
+        <p class="text-muted fw-light">
+          Booking.com is part of Booking Holdings Inc., the world leader in online travel and related
+          services.
+        </p>
+      </div>
+      <div class="my-2 text-center">
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <img src="../../shared/booking-logo.png" width="96" height="26" />
+          </li>
+          <li class="list-inline-item">
+            <img src="../../shared/priceline-logo.png" width="96" height="26" />
+          </li>
+          <li class="list-inline-item">
+            <img src="../../shared/kayak-logo.png" width="96" height="26" />
+          </li>
+          <li class="list-inline-item">
+            <img src="../../shared/agoda-logo.png" width="96" height="26" />
+          </li>
+          <li class="list-inline-item">
+            <img src="../../shared/rentalcars-logo.png" width="96" height="26" />
+          </li>
+          <li class="list-inline-item">
+            <img src="../../shared/opentable-logo.png" width="96" height="26" />
+          </li>
+        </ul>
+      </div>
+    </section>
+  </footer>
+
+  <!--End Foteeeer-->
+  <script src="../../bootstrap-custom/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="CarRentals.js"></script>
+</body>
+
+</html>
